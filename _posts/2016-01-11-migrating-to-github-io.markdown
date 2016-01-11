@@ -6,6 +6,8 @@ categories: blog
 ---
 Login to wordpress and export all pages
 
+```
 #aptitude install ruby ruby-dev
 #gem install jekyll jekyll-import hpricot open_uri_redirections
-$jekyll
+$jekyll serve
+```
