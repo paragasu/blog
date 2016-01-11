@@ -23,12 +23,10 @@ author:
   first_name: ''
   last_name: ''
 ---
-<p>The callback function for onRowDoubleClick for <a href="https://facebook.github.io/fixed-data-table">Fixed data table</a>.</p>
-<p><code><br />
-rowClicked: function(event, rowIndex, rowData){<br />
-//code here<br />
-}<br />
-..</p>
-<table>
-</table>
-<p></code></p>
+
+The callback function for onRowDoubleClick for [Fixed data table](https://facebook.github.io/fixed-data-table).
+
+	rowClicked: function(event, rowIndex, rowData){<br />
+		//code here
+	}
+

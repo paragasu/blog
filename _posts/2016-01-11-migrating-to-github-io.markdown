@@ -6,8 +6,8 @@ categories: blog
 ---
 Login to wordpress and export all pages
 
-```
-#aptitude install ruby ruby-dev
-#gem install jekyll jekyll-import hpricot open_uri_redirections
-$jekyll serve
-```
+	#aptitude install ruby ruby-dev
+	#gem install jekyll jekyll-import hpricot open_uri_redirections
+	$jekyll new paragasu.github.io
+	$cd paragasu.github.io
+	$jekyll serve
