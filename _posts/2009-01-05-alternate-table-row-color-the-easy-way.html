@@ -1,0 +1,33 @@
+---
+layout: post
+title: alternate table row color. the easy way!
+date: 2009-01-05 09:52:31.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- jquery
+- Website
+tags:
+- alternate table rows
+- jquery
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>it is very simple using jQuery.</p>
+<p><code><br />
+$(document).ready(function() {</p>
+<p> $('table.zebra tr:odd').addClass('odd');<br />
+ $('table.zebra tr:even').addClass('even');</p>
+<p>});<br />
+</code></p>
+<p>of course you have to create two css class with the name even and odd.</p>
+<p><a href="http://colorcharge.com/2007/12/13/jquery-alternate-table-rows/"><br />
+jquery alternate table rows</a><br />
+<a href="http://www.exforsys.com/tutorials/jquery/jquery-three-color-alternating-pattern.html">tree color alternating pattern</a></p>

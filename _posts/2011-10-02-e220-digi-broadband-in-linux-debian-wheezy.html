@@ -1,0 +1,48 @@
+---
+layout: post
+title: e220 digi broadband in linux debian wheezy
+date: 2011-10-02 08:27:28.000000000 +08:00
+type: post
+published: true
+status: publish
+categories: []
+tags: []
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>I am using debian Wheezy<br />
+Linux 2.6.32-5-686</p>
+<p><code><br />
+#aptitude install usb-modeswitch<br />
+#aptitude install wvdial<br />
+</code></p>
+<p>edit the /etc/wvdial.conf<br />
+<code><br />
+[Dialer defaults]<br />
+Phone=*99#<br />
+Stupid Mode=1<br />
+Dial Command=ATDT<br />
+Modem=/dev/ttyUSB0<br />
+Baud=230400<br />
+Init2=AT+CGDCONT=1, "IP", 3gdgnet"<br />
+Init3=<br />
+Username=digi<br />
+Password=digi<br />
+AskPassword=0<br />
+ISDN=0<br />
+Compuserve=0<br />
+Force Address =0<br />
+Idle Seconds=0<br />
+Auto DNS=1<br />
+Check Def dRoute=1<br />
+</code></p>
+<p>plug in the Huawei E220<br />
+<code><br />
+#wvdial<br />
+</code></p>

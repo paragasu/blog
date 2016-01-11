@@ -1,0 +1,26 @@
+---
+layout: post
+title: postgresql 8.4 could not create listen socket for localhost
+date: 2011-08-22 02:41:26.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- database
+- Linux
+tags: []
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>fixed this error by adding the</p>
+<p><code><br />
+auto lo<br />
+iface lo inet loopback<br />
+</code></p>
+<p>in /etc/network/interfaces</p>

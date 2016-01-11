@@ -1,0 +1,35 @@
+---
+layout: post
+title: display new icon based on db timestamp
+date: 2009-01-19 06:27:30.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- database
+- php
+tags:
+- mysql
+- new icon
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>this works in mysql5+. we want to display a small icon if the post_date is less than 2 days old. Unix timestamp is second. so for 2 days<br />
+<code><br />
+60 * 60 * 24 * 2 = 172800<br />
+</code><br />
+SQL query<br />
+<code><br />
+SELECT IF((UNIX_TIMESTAMP() - UNIX_TIMESTAMP(post_date)) &lt; 172800, 1, 0) AS is_new FROM tbl_news<br />
+</code><br />
+then the php code will be<br />
+<code><br />
+$p = mysqli_fecth_object($sql)<br />
+$p-&gt;is_new ? echo '&lt;img src="new.gif"&gt;' : '';<br />
+</code></p>

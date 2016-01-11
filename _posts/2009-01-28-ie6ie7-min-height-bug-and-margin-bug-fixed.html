@@ -1,0 +1,39 @@
+---
+layout: post
+title: ie6,ie7 min-height bug and margin bug fixed
+date: 2009-01-28 01:20:56.000000000 +08:00
+type: post
+published: true
+status: publish
+categories: []
+tags: []
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>I come across this stupid IE bug and it really waste a lot of my time. The worst thing is, my client use IE6 in his office computer and whenever i went to his office showing him his website. Everything look terrible.</p>
+<p style="text-align:center;">it should look like this<br />
+<img class="size-medium wp-image-280 aligncenter" title="iceweasel" src="{{ site.baseurl }}/assets/iceweasel.png?w=300" alt="iceweasel" width="300" height="230" /></p>
+<p style="text-align:center;">Image offset to the right<br />
+<img class="size-medium wp-image-282 aligncenter" title="ie7" src="{{ site.baseurl }}/assets/ie7.png?w=300" alt="ie7" width="300" height="225" /></p>
+<p style="text-align:center;">Image offset to the right and the web page is too short<br />
+<img class="size-medium wp-image-281 aligncenter" title="ie6" src="{{ site.baseurl }}/assets/ie6.png?w=300" alt="ie6" width="300" height="229" /></p>
+<p>I am not sure it is fixed or it just a dirty workaround. But here it is<br />
+<code><br />
+ul.innerfade li {<br />
+_margin-left:-425px; /*ie6 fix*/<br />
+*margin-left:-425px; /*ie7 fix */<br />
+}<br />
+</code><br />
+and another one in the td (html)<br />
+<code><br />
+style="_height:350px;"<br />
+</code><br />
+<br />
+<a href="http://www.webdevout.net/css-hacks">CSS hacks</a><br />
+<a href="http://www.evotech.net/blog/2007/05/ie7-only-css-hacks-examples/">IE7 only hacks</a></p></p>

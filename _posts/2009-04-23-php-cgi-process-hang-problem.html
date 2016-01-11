@@ -1,0 +1,27 @@
+---
+layout: post
+title: php-cgi process hang problem
+date: 2009-04-23 09:09:03.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- ngix
+- php-cgi hang
+- spawn-fcgi
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+$export PHP_FCGI_MAX_REQUESTS=1000<br />
+$spawn-fcgi -a 127.0.0.1 -p 9000 -u www-data -g www-data /usr/bin/php5-cgi </code><br />
+<a href="http://blog.taragana.com/index.php/archive/how-to-stop-crashing-hanging-of-php-cgi-spawn-fcgi-with-nginx-lighttpd/"><br />
+hanging of php-cgi</a></p>

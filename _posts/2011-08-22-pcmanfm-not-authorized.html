@@ -1,0 +1,30 @@
+---
+layout: post
+title: PCManfm Not Authorized
+date: 2011-08-22 12:47:37.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags: []
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>create a file /etc/polkit-1/localauthority/50-local.d/55-storage.pkla</p>
+<p>with the content<br />
+<code><br />
+[Storage Permissions]<br />
+Identity=unix-group:plugdev<br />
+Action=org.freedesktop.udisks.filesystem-mount;org.freedesktop.udisks.drive-eject;org.freedesktop.udisks.drive-detach;org.freedesktop.udisks.luks-unlock;org.freedesktop.udisks.inhibit-polling;org.freedesktop.udisks.drive-set-spindown<br />
+ResultAny=yes<br />
+ResultActive=yes<br />
+ResultInactive=no<br />
+</code></p>
+<p><a href="http://blog.dale.id.au/archives/1068">more info</a></p>

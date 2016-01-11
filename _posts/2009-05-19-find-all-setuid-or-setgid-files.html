@@ -1,0 +1,26 @@
+---
+layout: post
+title: find all setuid or setgid files
+date: 2009-05-19 11:54:34.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- files
+- find
+- setgid
+- setuid
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+#find / -type f \( -perm -4000 -o -perm -2000 \) -exec ls -ld '{}' \;</code></p>
+<p><a href="http://www.faqs.org/faqs/computer-security/most-common-qs/section-15.html">How do I find all setuid and setgid files?</a></p>

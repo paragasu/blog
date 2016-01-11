@@ -1,0 +1,34 @@
+---
+layout: post
+title: 'FATAL: module fbcon not found'
+date: 2010-08-04 04:10:35.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- 'fatal: module fbcon not found'
+meta:
+  _edit_last: '5225680'
+  _wp_old_slug: ''
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>Recent debian upgrade cause my X server failed to start.<br />
+<code><br />
+linux-image-2.6.32<br />
+xserver-xorg 7.5<br />
+i915 intel graphics<br />
+</code></p>
+<p>you can ignore the error FATAL: module fbcon not found.<br />
+the real problem might be in<br />
+<code><br />
+$cat ~/.xsession-errors<br />
+</code></p>
+<p>In my case the problem is the im-switch missing default configuration files.<br />
+reinstalling im-switch solved the problem.</p>

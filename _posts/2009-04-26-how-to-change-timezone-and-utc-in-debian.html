@@ -1,0 +1,29 @@
+---
+layout: post
+title: how to change timezone and UTC in debian
+date: 2009-04-26 14:32:31.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- debian
+- timezone
+- utc setting
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>to change timezone<br />
+<code><br />
+#dpkg-reconfigure tzdata</code></p>
+<p>UTC time mean, you computer will display time related to GMT. To use local time instead of UTC<br />
+edit /etc/default/rcS<br />
+<code><br />
+UTC=no</code></p>

@@ -1,0 +1,39 @@
+---
+layout: post
+title: upgrade postgresql-8.1 to postgresql-8.3 in debian etch
+date: 2009-03-29 18:04:56.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- database
+- Linux
+tags:
+- debian
+- etch
+- postgresql-8.1
+- postgresql-8.2
+- upgrade
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>postgresql-8.3 available for etch on backports repositories. Add to /etc/apt/sources.list<br />
+<code><br />
+deb http://www.backports.org/debian etch-backports main contrib non-free<br />
+</code><br />
+then install postgresql-8.3<br />
+<code><br />
+#apt-get -t etch-backports install postgresql-8.3<br />
+#pg_dropcluster --stop 8.3 main<br />
+#pg_upgradecluster 8.1 main<br />
+#pg_dropcluster --stop 8.1 main<br />
+#apt-get remove postgresql-8.1<br />
+</code><br />
+<br />
+<a href="http://blog.tquadrado.com/?p=174">read more</a></p>

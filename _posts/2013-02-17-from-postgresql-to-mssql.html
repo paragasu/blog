@@ -1,0 +1,34 @@
+---
+layout: post
+title: From PostgreSQL to MSSQL
+date: 2013-02-17 03:04:43.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- database
+tags: []
+meta:
+  _edit_last: '5225680'
+  _publicize_pending: '1'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>I love postgresql but my client request specifically for MSSQL. </p>
+<p>1. PGSQL boolean column return 't' and 'f' for true and false<br />
+   MSSQL bit column return 1 and 0 for truen and false </p>
+<p>2. PGSQL text column is special it can be use for any size of text<br />
+   MSSQL varchar column to be able to use operator in where clause and varchar(max) for long string</p>
+<p>3. PGSQL use pg_* functions<br />
+   MSSQL use sqlsrv_* driver supplied by Microsoft and this driver can only be use in windows.</p>
+<p>4. PGSQL pg_fetch_object return string for datetime column value<br />
+   MSSQL sqlsrv_fetch_object return DateTime object for datetime column value.<br />
+   I have to pass 'ReturnDatesAsString' option in the connection string to turn if off.</p>
+<p>5. Paging in PGSQL is straight forward using LIMIT .. OFFSET<br />
+   In MSSQL i have to use CTE function to enable to use my existing paging library.</p>
+<p>6. PGSQL pg_affected_rows()<br />
+   MSSQL sqlsrv_rows_affected()</p>

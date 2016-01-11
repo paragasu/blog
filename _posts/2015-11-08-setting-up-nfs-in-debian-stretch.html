@@ -1,0 +1,52 @@
+---
+layout: post
+title: setting up nfs in debian stretch
+date: 2015-11-08 01:57:58.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- debian stretch
+- Linux
+- nfs
+meta:
+  sharing_disabled: '1'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '16640304645'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>On nfs server<br />
+<code><br />
+#aptitude install nfs-kernel-server<br />
+</code></p>
+<p>Edit /etc/exports configuration file<br />
+<code><br />
+/home/me/public 192.168.1.2(rw,no_root_squash,subtree_check)<br />
+</code></p>
+<p>Restart nfs<br />
+<code><br />
+#exportfs -a<br />
+#/etc/init.d/nfs-kernel-server start<br />
+</code></p>
+<p>On nfs client<br />
+<code><br />
+#aptitude install nfs-common<br />
+#/etc/init.d/nfs-common start<br />
+</code></p>
+<p>To list available nfs<br />
+<code><br />
+#showmount -e 192.168.1.2<br />
+</code></p>
+<p>To mount nfs<br />
+<code><br />
+#mount -t nfs /home/me/public /mnt/public<br />
+</code><br />
+<a href="https://www.linode.com/docs/networking/basic-nfs-configuration-on-debian-7/">more info</a></p>

@@ -1,0 +1,28 @@
+---
+layout: post
+title: login to SSH with keys
+date: 2009-08-06 01:01:24.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- ssh login keys
+- ssh-add
+- ssh-copy-id
+- ssh-gen
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+$ssh-gen -t rsa<br />
+$ssh-copy-id username@server<br />
+$ssh-add ~/.ssh/id_rsa </code></p>
+<p><a href="http://ditesh.gathani.org/blog/2009/01/09/that-bag-of-ssh-tips-and-tricks/">the bags of SSH tips and tricks</a></p>

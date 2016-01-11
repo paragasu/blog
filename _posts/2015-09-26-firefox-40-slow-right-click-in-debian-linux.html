@@ -1,0 +1,51 @@
+---
+layout: post
+title: Firefox 40+ slow right click in Debian Linux
+date: 2015-09-26 07:19:02.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- debian
+- firefox
+- slow right click
+meta:
+  _edit_last: '5225680'
+  geo_public: '0'
+  _publicize_job_id: '15182325226'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>Just installed latest firefox on debian linux streetch.<br />
+Right click on link popup very slow.</p>
+<blockquote><p>SOLVED: [blfs-support] Firefox - slow menu and right-click response</p>
+<p>The right click menu in Firefox is now fast again. I disabled Pulseaudio which<br />
+tried to load ConsoleKit. This did not work sine I have unstalled ConsoleKit.</p>
+<p>=== details ===</p>
+<p>I found this:</p>
+<p>/var/log/sys.log<br />
+Jan 25 09:13:47 lfs pulseaudio[2565]: [pulseaudio] module-console-kit.c:<br />
+GetSessionsForUnixUser() call failed:<br />
+org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.ConsoleKit<br />
+was not provided by any .service files<br />
+Jan 25 09:13:47 lfs pulseaudio[2565]: [pulseaudio] module.c: Failed to load<br />
+module "module-console-kit" (argument: ""): initialization failed.<br />
+Jan 25 09:13:47 lfs pulseaudio[2565]: [pulseaudio] main.c: Module load failed.<br />
+Jan 25 09:13:47 lfs pulseaudio[2565]: [pulseaudio] main.c: Failed to<br />
+initialize daemon.<br />
+Jan 25 09:13:47 lfs pulseaudio[2562]: [pulseaudio] main.c: Daemon startup<br />
+failed.</p>
+<p>I commented out the text below in /etc/pulse/default.pa<br />
+#.ifexists module-console-kit.so<br />
+#load-module module-console-kit<br />
+#.endif</p>
+<p>I restarted and then the problem with the Firefox menus disappeared.</p>
+<p>The root cause is probably that I uninstalled ConsoleKit. This was<br />
+intentional, but I failed to recognize the side effects.</p>
+<p>Magnus</p></blockquote>

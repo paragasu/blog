@@ -1,0 +1,30 @@
+---
+layout: post
+title: Add menu on fbpanel
+date: 2012-01-09 00:28:25.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags: []
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>If you install binary manually eg: eclipse. Most likely you end up without entries in FBpanel the start menu.</p>
+<p>Just create a file appname.desktop in then ~/.local/share/applications<br />
+<code><br />
+[Desktop Entry]<br />
+Type=Application<br />
+Name=Eclipse<br />
+Exec=/opt/eclipse/eclipse<br />
+Icon=/opt/eclipse/icon.xpm<br />
+NoDisplay=false<br />
+Categories=Development<br />
+</code></p>

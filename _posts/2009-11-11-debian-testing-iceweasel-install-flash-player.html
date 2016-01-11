@@ -1,0 +1,27 @@
+---
+layout: post
+title: debian testing + iceweasel install flash player
+date: 2009-11-11 04:46:40.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- flash plugin
+- iceweasel
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+#apt-get install flashplugin-nonfree </code><br />
+should be working. but in my debian testing it isn't. I have to manually create a symlinks </p>
+<p><code><br />
+#ln -s /usr/lib/flashplugin-nonfree/libflashplayer.so /usr/lib/iceweasel/plugins/libflashplayer.so <code></p>
+<p>to make it work. </code></code></p>

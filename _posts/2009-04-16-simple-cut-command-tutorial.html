@@ -1,0 +1,37 @@
+---
+layout: post
+title: simple cut command tutorial
+date: 2009-04-16 03:49:35.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- cut
+- simple cut tutorial
+- tutorial
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>cut is quite handy when we do bash script. </p>
+<p>gobukgumuk.txt<br />
+<code>tomulikud om tuod, tomoguang om gobuk</code><br />
+<code><br />
+$cat gobukgumuk.txt | cut -d, -f2 </code><br />
+will give "tomoguang om gobuk"<br />
+<code><br />
+$cat gobukgumuk.txt | cut -c1-9 </code><br />
+will give "tumolikud"</p>
+<p>we can save the output to a variable name<br />
+<code><br />
+name=`who am i | cut -f1 -d' '` </code></p>
+<p><a href="http://www.hscripts.com/tutorials/linux-commands/cut.html">cut command tutorial</a><br />
+<a href="http://lowfatlinux.com/linux-columns-cut.html">how to select column from a file</a><br />
+<a href="http://www.computerhope.com/unix/ucut.htm">cut command</a></p>

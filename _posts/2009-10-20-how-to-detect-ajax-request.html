@@ -1,0 +1,25 @@
+---
+layout: post
+title: how to detect ajax request
+date: 2009-10-20 08:56:22.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- php
+tags:
+- detect ajax request
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>ajax request will send additional header<br />
+<code><br />
+if($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest')<br />
+echo 'ajax';</code></p>
+<p><a href="http://stackoverflow.com/questions/1482086/is-there-a-way-in-php-of-detecting-if-the-script-was-called-by-jquery-load-or-n">stackoverflow</a></p>

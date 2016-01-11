@@ -1,0 +1,31 @@
+---
+layout: post
+title: NEC Versa S5500 + RT8111/8168B ethernet driver
+date: 2008-11-24 03:35:45.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- addrconf(netdev_up)
+- link is not ready
+- nic versa 5500
+- r8168
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>In debian lenny, the default driver installed is r8169. It works, but sometime you will get an error </p>
+<p><code><br />
+ADDRCONF(NETDEV_UP): eth1: link is not ready<br />
+</code> </p>
+<p>you should install r8168 driver and upgrade the kernel to at least linux-image-2.6.26-1-686</p>
+<p><a href="http://www.jamesonwilliams.com/bin/r8168_scripts.tar.bz2">download r8168 driver</a><br />
+<a href="http://www.jamesonwilliams.com/hardy-r8168.html"><br />
+r8168 driver install instructio</a>n </p>

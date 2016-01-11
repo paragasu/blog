@@ -1,0 +1,44 @@
+---
+layout: post
+title: acer aspire d255e card reader driver in debian squeeze
+date: 2011-03-13 01:58:58.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- acer aspire one 255e
+- ene technology linux
+- multi card reader deriver d225e
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>Build in multi card reader in acer aspire one is from ENE Technology.<br />
+Here is an instruction to compile the kernel module driver</p>
+<p><a href="http://ftp.twaren.net/Linux/Linpus/Acer_Linpus_Moblin_Lite/srpms/linpus-customize/kernel/driver-src/cardreader/ENE/R100_02_ene_card_reader.zip">Download the driver </a></p>
+<p>unzip to /usr/src/keucr-0.0.1<br />
+create /usr/src/keucr-0.0.1/dkms.conf file<br />
+<code><br />
+PACKAGE_NAME="keucr"<br />
+PACKAGE_VERSION="0.0.1"<br />
+CLEAN="rm -f *.*o"<br />
+BUILT_MODULE_NAME[0]="keucr"<br />
+MAKE[0]="make -C $kernel_source_dir M=$dkms_tree/$PACKAGE_NAME/$PACKAGE_VERSION/build"<br />
+DEST_MODULE_LOCATION[0]="/extra"<br />
+AUTOINSTALL="yes"<br />
+</code></p>
+<p><code><br />
+#dkms add -m keucr -v 0.0.1<br />
+#dkms build -m keucr -v 0.0.1<br />
+#dkms install -m keucr -v 0.0.1<br />
+#cat keucr &gt;&gt; /etc/modules<br />
+</code></p>
+<p><a href="http://ubuntuforums.org/showpost.php?p=10466418&amp;postcount=36"><br />
+more info</a></p>

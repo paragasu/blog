@@ -1,0 +1,34 @@
+---
+layout: post
+title: Disable ipv6 in debian
+date: 2015-11-29 09:46:43.000000000 +08:00
+type: post
+published: true
+status: publish
+categories: []
+tags:
+- debian
+- ipv6
+- Linux
+meta:
+  _edit_last: '5225680'
+  geo_public: '0'
+  _publicize_job_id: '17299640907'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>edit /etc/sysctl.conf and add config</p>
+<p><code><br />
+net.ipv6.conf.all.disable_ipv6 = 1<br />
+net.ipv6.conf.default.disable_ipv6 = 1<br />
+net.ipv6.conf.lo.disable_ipv6 = 1<br />
+net.ipv6.conf.eth0.disable_ipv6 = 1<br />
+</code></p>
+<p><code><br />
+#sysctl -p<br />
+</code></p>
+<p><a href="https://wiki.debian.org/DebianIPv6">Debian IPv6</a></p>

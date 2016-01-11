@@ -1,0 +1,35 @@
+---
+layout: post
+title: the magic of PHP variable function
+date: 2008-10-16 05:16:30.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- php
+tags:
+- call_user_func
+- call_user_func_array
+- php
+- variable function
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code>&lt;?php<br />
+$func = "sqrt";<br />
+if (is_callable($func)) {<br />
+print $func(49);<br />
+}<br />
+//result 7<br />
+?&gt;<br />
+</code></p>
+<p>Alternatively you can use <a href="http://www.php.net/manual/en/function.call-user-func.php">call_user_func()</a> and <a href="http://www.php.net/manual/en/function.call-user-func-array.php">call_user_func_array()<br />
+</a></p>
+<blockquote><p>call_user_func is twice slower than direct call function and call_user_func_array is 10%-20% slower than call_user_func</p></blockquote>
+<p><a href="http://www.hudzilla.org/phpbook/read.php/4_19_0">more info </a></p>

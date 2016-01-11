@@ -1,0 +1,29 @@
+---
+layout: post
+title: postgresql version of mysql UNIX_TIMESTAMP()
+date: 2009-09-24 15:28:20.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- database
+tags:
+- postgresql mysql unix_timestamp
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>MySQL<br />
+<code><br />
+mysql&gt; SELECT UNIX_TIMESTAMP();<br />
+mysql&gt; SELECT UNIX_TIMESTAMP('1973-11-29 21:33:09');</code></p>
+<p>PostgreSQL<br />
+<code><br />
+postgres=&gt; SELECT EXTRACT(EPOCH FROM CURRENT_TIMESTAMP(0));<br />
+postgres=&gt; SELECT EXTRACT(EPOCH FROM TIMESTAMP '1973-11-29 21:33:09');</code></p>
+<p><a href="http://janusz.slota.name/blog/2009/06/mysql-from_unixtime-and-unix_timestamp-functions-in-postgresql/">MySQL from_unixtime and unix_timestamp</a></p>

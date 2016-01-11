@@ -1,0 +1,29 @@
+---
+layout: post
+title: iceweasel white background bug
+date: 
+type: post
+published: false
+status: draft
+categories:
+- Linux
+tags:
+- iceweasel
+- scrolling
+- white background
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>Recently when i upgrade my debian linux. there is a very annoying problem on my iceweasel  browser. all background image rendered ugly and whenever i scrolling the page, it leave a white space. It turn out, it is not iceweasel problem but Xorg and graphic card (i use intel GM965)</p>
+<p>To fix, add in /etc/X11/xorg.conf on Device section<br />
+<code><br />
+        Option          "AccelMethod" "XAA"<br />
+        Option          "XaaNoOffscreenPixmaps" "on"</p>
+<p></code></p>
+<p><a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=482992">bug details</a></p>

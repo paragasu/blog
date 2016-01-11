@@ -1,0 +1,27 @@
+---
+layout: post
+title: ifup eth0 vs ifconfig eth0 up
+date: 2008-10-30 08:52:30.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- ifconfig
+- ifup
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+#ifup eth0<br />
+#ifconfig eth0 up<br />
+</code></p>
+<p>both work the same way. ifup will configure network based on  /etc/network/interfaces. <br />
+ifconfig use to configrue kernel resident network interfaces</p>

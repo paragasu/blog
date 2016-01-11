@@ -1,0 +1,30 @@
+---
+layout: post
+title: mysql cache SQL_NO_CACHE
+date: 2009-11-03 06:27:38.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- database
+tags:
+- mysql cache query
+- sql_cache
+- sql_no_cache
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>enable query cache (maybe default depends of the server configuration)<br />
+<code><br />
+SELECT SQL_CACHE SUM(points) FROM account; </code></p>
+<p>turn off mysql query cach<br />
+<code><br />
+SELECT SQL_NO_CACHE SUM(points) FROM account; </code></p>
+<p><a href="http://www.petefreitag.com/item/390.cfm"><br />
+the mysql query cache</a></p>

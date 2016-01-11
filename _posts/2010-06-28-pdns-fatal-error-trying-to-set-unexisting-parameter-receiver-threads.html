@@ -1,0 +1,28 @@
+---
+layout: post
+title: 'pdns Fatal Error:  Trying to set unexisting parameter ''receiver-threads'''
+date: 2010-06-28 13:25:23.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags: []
+meta:
+  _edit_last: '5225680'
+  _wp_old_slug: ''
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>I got this error from syslog.<br />
+<code><br />
+ $vim /etc/powerdns/pdns.conf </code></p>
+<p>comment out the receiver-threads<br />
+<code><br />
+#receiver-threads number of receiver threads to launch<br />
+#receiver-threads=1 </code></p>
+<p>some people report this as bug. this one works at least for me ;)</p>

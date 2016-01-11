@@ -1,0 +1,28 @@
+---
+layout: post
+title: nginx www to non www
+date: 2009-05-04 13:25:11.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- nginx
+- www to non www
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>redirect url with www to non www. edit /etc/nginx/nginx.conf or /etc/nginx/sites-enabled/default<br />
+<code><br />
+if ($host ~* www\.(.*)){<br />
+     set $host_without_www $1;<br />
+     rewrite ^(.*)$ http://$host_without_www$1 permanent;<br />
+}<br />
+</code></p>

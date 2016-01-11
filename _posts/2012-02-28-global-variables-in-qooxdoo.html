@@ -1,0 +1,61 @@
+---
+layout: post
+title: global variables in qooxdoo
+date: 2012-02-28 23:50:00.000000000 +08:00
+type: post
+published: true
+status: publish
+categories: []
+tags:
+- qooxdoo
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+Declare the variables in your Application class:</p>
+<p> qx.Class.define("custom.Application",<br />
+{<br />
+  extend  : qx.application.Standalone,</p>
+<p>  members :<br />
+  {<br />
+    /** My global variable */<br />
+    bGlobal : true</p>
+<p>    main : function()<br />
+    {<br />
+      // access to global variable from within this class using "this"<br />
+      this.bGlobal = false;<br />
+    }<br />
+  }<br />
+}</p>
+<p>Then you can access that main application class using qx.core.Init.getApplication() so in some other class, you can read  the global like this:</p>
+<p> qx.Class.define("custom.SomeArbitraryClass",<br />
+{<br />
+  extend  : qx.core.Object,</p>
+<p>  construct : function()<br />
+  {<br />
+    /** Access the global variable */<br />
+    if (qx.core.Init.getApplication().bGlobal)<br />
+    {<br />
+      alert("The global is TRUE");<br />
+    }<br />
+}</p>
+<p>You could also have made that global be a property of the Application class:<br />
+ qx.Class.define("custom.Application",<br />
+{<br />
+  extend  : qx.application.Standalone,</p>
+<p>  properties :<br />
+  {<br />
+    /** My global variable */<br />
+    global : true<br />
+    ...</p>
+<p>in which case you'd reference it from the other class using the property's getter:</p>
+<p>  qx.core.Init.getApplicaiton().getGlobal()</p>
+<p>Hope that helps.</p>
+<p>Derrell<br />
+</code></p>

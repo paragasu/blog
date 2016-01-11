@@ -1,0 +1,41 @@
+---
+layout: post
+title: resize photo using imagick
+date: 2008-11-18 13:57:12.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- bash
+- convert
+- resize
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>i use a very old laptop - VIA C3 1Ghz + 256MB memory with broken fan.<br />
+I have about 200MB photos in one folder with 1MB size each. Resizing with Gimp is not an option because it takes few minutes to even show or display the content of the folder.<br />
+I wrote simple but practical bash script resize.sh</p>
+<p><code><br />
+#!/bin/bash<br />
+for i in *.JPG<br />
+do<br />
+        if [-e "thumbs/$i"]; then<br />
+                echo "$i exists"<br />
+        else<br />
+                echo "resize $i"<br />
+                convert "$i" -resize 600x450 "thumbs/$i"<br />
+       fi<br />
+done<br />
+echo "finish"<br />
+</code></p>
+<p>I simply run the script and go outside watching movie. It takes almost hours to finish<br />
+Sometime it just stop half way. Have to re-run the scripts to make the whole thumbnails. </p>
+<p> The best solutions might be to get a new computer. </p>

@@ -1,0 +1,31 @@
+---
+layout: post
+title: how to avoid ssh timeout
+date: 2008-11-20 11:03:18.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags: []
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>i always face with this problem every time i use ssh client from new installed debian system. Edit the /etc/ssh/sshd_config </p>
+<p><code><br />
+ClientAliveInterval 300<br />
+ClientAliveCountMax 10<br />
+</code></p>
+<p>On client side, in $HOME/.ssh/config or /etc/ssh/ssh_config<br />
+<code><br />
+ServerAliveInterval 30<br />
+ServerAliveCountMax 10<br />
+</code></p>
+<p>Make sure the ssh server using <strong>Protocol 2</strong> <br />
+Check man ssh_config and sshd_config for more info</p>

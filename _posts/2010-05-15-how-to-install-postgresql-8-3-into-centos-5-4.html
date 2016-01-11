@@ -1,0 +1,38 @@
+---
+layout: post
+title: How to install PostgreSQL 8.3 into CentOS 5.4
+date: 2010-05-15 04:46:47.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- centos 5.4
+- postgresql 8.3
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>PostgreSQL 8.1 is currently the default version in CentOS 5.4 which do not support INSERT.. RETURNING</p>
+<p>remove PostgreSQL 8.1<br />
+<code><br />
+#yum remove postgresql postgresql-server<br />
+</code></p>
+<p><code><br />
+# vi /etc/yum.repos.d/CentOS-Base.repo<br />
+[base]<br />
+exclude=postgresql*<br />
+[updates]<br />
+exclude=postgresql*<br />
+</code></p>
+<p><code><br />
+#wget http://yum.pgsqlrpms.org/reporpms/8.3/pgdg-centos-8.3-7.noarch.rpm<br />
+#rpm -ivh pgdg-centos-8.3-6.noarch.rpm<br />
+#yum install postgresql postgresql-server<br />
+</code></p>

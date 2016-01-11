@@ -1,0 +1,32 @@
+---
+layout: post
+title: fix pidgin & yahoo messenger Error 1013
+date: 2009-07-26 02:24:06.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- pidgin error 1013
+- yahoo messenger pidgin
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>you must upgrade to pidgin 2.5.8 which is available in debian unstable (sid).<br />
+add to /etc/apt/sources.list<br />
+<code><br />
+deb http://ftp.debian.org/debian/ sid main contrib non-free</code><br />
+<code><br />
+#apt-get update<br />
+#apt-get install -t sid pidgin</code></p>
+<p>change the pager server to<br />
+<code><br />
+scsa.msg.yahoo.com</code></p>
+<p>Error 1013 - just remove the @yahoo.com on your pidgin login username</p>

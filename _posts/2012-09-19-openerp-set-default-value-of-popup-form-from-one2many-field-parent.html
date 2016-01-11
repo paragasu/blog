@@ -1,0 +1,40 @@
+---
+layout: post
+title: Openerp set default value of popup form from one2many field parent
+date: 2012-09-19 15:51:06.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- openerp
+tags:
+- one2many
+- openerp
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>class definition (shop.py), please note the magic active_id</p>
+<p><code><br />
+class item(osv.osv):<br />
+_name = "shop.item"<br />
+_columns = {<br />
+"item_id": fields.many2one("shop.cart", "Cart"),<br />
+}<br />
+_defaults = {<br />
+"item_id": lambda self, cr, uid, c: c.get('item_id', False),<br />
+}</code></p>
+<p>class cart(osv.osv):<br />
+_name = "shop.cart"<br />
+_columns = {<br />
+"item_ids": one2many("shop.item", "item_id", "Items"),<br />
+}</p>
+<p>In the view definition for the one2many field (shop_view.xml)<br />
+<code></code></p>
+<p>&lt;field name="item_ids" domain="['item_id', '=', active_id]" context="{'item_id': active_id}" /&gt;</p>
+<p>&nbsp;</p>

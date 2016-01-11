@@ -1,0 +1,29 @@
+---
+layout: post
+title: creating a pdf preview
+date: 2010-07-24 15:32:24.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- php
+tags:
+- pdf preview
+meta:
+  _edit_last: '5225680'
+  _wp_old_slug: ''
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+$im = new imagick('test.pdf[0]'); //1st page<br />
+$im-&gt;setImageFormat('png');<br />
+header('Content-Type: image/png');<br />
+echo $im;<br />
+</code><br />
+<a href="http://valokuva.org/?p=7"><br />
+more</a></p>

@@ -1,0 +1,38 @@
+---
+layout: post
+title: debian lenny and canon canoscan lide 110
+date: 2011-03-11 07:14:05.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- canon lide 110 scanner debian
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>Installing canoscan lide 110 scanner in debian</p>
+<p><code><br />
+#cd /usr/src<br />
+#git clone git://git.debian.org/sane/sane-backends.git<br />
+#cd sane-backends<br />
+#./configure --prefix=/usr --sysconfdir=/etc/ --localstatedir=/var<br />
+#make<br />
+#make install<br />
+#adduser  scanner<br />
+</code></p>
+<p>edit /etc/udev/rules.d/z60_libsane.rules</p>
+<p><code><br />
+# Canon CanoScan Lide 110<br />
+ATTRS{idVendor}=="04a9", MODE="0664", GROUP="scanner", ATTRS{idProduct}=="1909", ENV{libsane_matched}="yes"<br />
+</code></p>
+<p>make sure you put the scanner to unlock mode (there is a button on the bottom) otherwise it make a loud cracking sound and it is not working.</p>
+<p><code> </code></p>
+<p><code>#aptitude install xsane </code></p>

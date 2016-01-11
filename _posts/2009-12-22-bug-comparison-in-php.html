@@ -1,0 +1,28 @@
+---
+layout: post
+title: bug comparison in PHP
+date: 2009-12-22 05:07:29.000000000 +08:00
+type: post
+published: true
+status: publish
+categories: []
+tags:
+- bug
+- large int
+- php float comparison
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>php do not be able to compare large int and float reliably.</p>
+<p><code><br />
+$val1 = 0.2; $val2 = 0.2;<br />
+if($val1 &lt; $val2){ echo &#039;it is true&#039;;} </code></p>
+<p>one workaround for equal comparison is to cast the value to string type.</p>
+<p><a href="http://patchlog.com/php/comparing-float-values-in-php/"><br />
+comparison of float value in PHP</a></p>

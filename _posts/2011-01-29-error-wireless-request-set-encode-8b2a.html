@@ -1,0 +1,30 @@
+---
+layout: post
+title: Error wireless request set encode 8b2a
+date: 2011-01-29 11:06:49.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags: []
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+iwconfig wlan0 set s:passphrase<br />
+<code></p>
+<p>It only works on WEP. WPA is not supported.<br />
+You need to install wicd or wpa_supplicant.<br />
+Edit the /etc/network/interfaces and remove any references to wlan0</p>
+<p><code><br />
+#apt-get install wicd<br />
+$wicd-client<br />
+</code></p>
+<p><a href="http://wiki.debian.org/WiFi/HowToUse">more</a></code></code></p>

@@ -1,0 +1,30 @@
+---
+layout: post
+title: postgresql add on delete cascade to foreign key
+date: 2009-09-02 06:03:45.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- database
+tags:
+- add delete cascade
+- violates foreign constaraint
+meta:
+  _edit_last: '5225680'
+  _oembed_f999bb4b9673ee1f89223bc9c9ee0bca: "{{unknown}}"
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+ERROR: update or delete on table "page" violates foreign key constraint "info_page_id_fkey" on table "info" DETAIL: Key (page_id)=(106) is still referenced from table "info"</code></p>
+<p>you have to drop cascade and recreating the new one.<br />
+<code><br />
+psql&gt; \d info </code><br />
+<code><br />
+psql&gt; alter table info drop constraint info_page_id_fkey;<br />
+psql&gt; alter table info add constraint "info_page_id_fkey" foreign key(page_id) references page on delete cascade;</code></p>

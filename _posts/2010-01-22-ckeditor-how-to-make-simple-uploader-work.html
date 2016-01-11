@@ -1,0 +1,37 @@
+---
+layout: post
+title: ckeditor - how to make simple uploader work
+date: 2010-01-22 02:58:04.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- javascript
+- php
+tags:
+- ckeditor
+- simple upload
+- uploader
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>edit the html page where you call the ckeditor instance.<br />
+<code><br />
+CKEDITOR.replace('editor',<br />
+{<br />
+filebrowserUploadUrl:'/path/to/upload/script.php';<br />
+}); </code></p>
+<p>the line above will display the upload from whenever user click on the image icon.<br />
+the upload script should return<br />
+<code><br />
+&lt;script type="text/javascript"&gt;<br />
+window.parent.CKEDITOR.tools.callFunction(1, '&lt;url of uploaded file&gt;', '');&lt;/script&gt;</code></p>
+<p><a href="http://cksource.com/forums/viewtopic.php?f=11&amp;t=15700"><br />
+ckeditor external file uploader</a><br />
+<a href="http://cksource.com/forums/viewtopic.php?f=6&amp;t=15624">ckeditor image uploader problem</a></p>

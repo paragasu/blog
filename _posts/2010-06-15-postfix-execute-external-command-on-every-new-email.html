@@ -1,0 +1,36 @@
+---
+layout: post
+title: postfix execute external command on every new email
+date: 2010-06-15 11:13:55.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+- php
+tags:
+- execute script on new email
+- postfix
+meta:
+  _edit_last: '5225680'
+  _wp_old_slug: ''
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>edit /etc/postfix/master.cf</p>
+<p><code><br />
+smtp    inet  n       -       -       -       -       smtpd  -o content_filter=my_scripts:<br />
+my_scripts unix -     n       n       -       -       pipe<br />
+         flags=Xhq user=username argv=/usr/bin/php /my_scripts.php<br />
+</code></p>
+<p>X - perform final delivery<br />
+h - set the domain &amp; recipient to lowercase<br />
+q - quote white space &amp; other special characters</p>
+<p><a href="http://jasonseifer.com/2009/04/24/receving-email-with-rails"><br />
+more info</a><a href="http://www.evolt.org/incoming_mail_and_php"><br />
+incoming mail and php</a><a href="http://jeroensmeets.net/setup-postfix-to-forward-incoming-email-to-php/"><br />
+setup postfix to forward incoming email to php</a></p>

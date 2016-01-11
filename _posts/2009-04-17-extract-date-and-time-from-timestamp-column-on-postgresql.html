@@ -1,0 +1,34 @@
+---
+layout: post
+title: extract date and time from timestamp column on postgresql
+date: 2009-04-17 06:45:07.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- database
+tags:
+- extract date time from postgresql timestamp column
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>to extract date from coldate,<br />
+<code><br />
+SELECT date(coldate) FROM mytable;<br />
+</code></p>
+<p>to extract time, doing time(coldate) will give an error instead,<br />
+<code><br />
+SELECT "time"(coldate) FROM mytable<br />
+</code></p>
+<p>another way<br />
+<code><br />
+SELECT coldate::time FROM mytable</code></p>
+<p><a href="http://www.postgresql.org/docs/8.0/interactive/functions-datetime.html"><br />
+postgresql date/time doc</a><br />
+<a href="http://bytes.com/topic/postgresql/answers/689779-extract-date-timestamp">extract date from timestamp</a></p>

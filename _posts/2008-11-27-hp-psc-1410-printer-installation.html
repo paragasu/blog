@@ -1,0 +1,29 @@
+---
+layout: post
+title: HP PSC 1410 printer installation
+date: 2008-11-27 17:40:49.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- hp psc 1410
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+#apt-get install hpoj hpijs<br />
+</code></p>
+<p>then copy the ppd files to<br />
+<code><br />
+cp HP-PSC_1400-hpijs.ppd /usr/share/cups/model<br />
+</code></p>
+<p>add printer in http://localhost:631</p>
+<p><a href="http://ubuntuforums.org/showthread.php?t=66335">more info</a></p>

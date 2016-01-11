@@ -1,0 +1,24 @@
+---
+layout: post
+title: inverting value in mysql table
+date: 2009-02-16 02:00:15.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- database
+tags:
+- invert boolean value
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>It is possible to invert the value in mysql table without knowing the present value. This working on mysql and may not work on postgresql.</p>
+<p><code><br />
+UPDATE table_name SET column = NOT column<br />
+</code></p>

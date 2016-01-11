@@ -1,0 +1,48 @@
+---
+layout: post
+title: Local dns cache with dnsmasq
+date: 2008-11-20 08:00:18.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- dnsmasq
+- local dns cache
+- pdnsd
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>local cache for faster internet browsing.</p>
+<p><code><br />
+#apt-get install dnsmasq<br />
+</code><br />
+in /etc/dnsmasq.conf<br />
+<code><br />
+listen-address=127.0.0.1<br />
+</code><br />
+in /etc/dhcp3/dhclient.conf<br />
+<code><br />
+prepend domain-name-server 127.0.0.1;<br />
+</code><br />
+in /etc/resolv.conf<br />
+<code><br />
+nameserver 127.0.0.1<br />
+</code><br />
+The last thing you need to do<br />
+<code><br />
+#/etc/init.d/dnsmasq restart<br />
+#/etc/init.d/networking restart<br />
+</code><br />
+Another interesting package that does the same thing is pdnsd. The best thing about pdnsd is, it saves the dns cache in disk which is still available even after you reboot.</p>
+<p><a href="http://80.83.114.72/linux/howto/dnsmasq.html"><br />
+More info on dnsmasq</a><br />
+<a href="http://www.geocities.com/sunil_tt/pdnsd.txt">pdnsd info</a> <br />
+<a href="http://kakku.wordpress.com/2008/01/29/local-dns-caching-pdnsd-reduce-name-resolutions-times-run-your-own-caching-dns-server-and-theres-something-about-opendns/">How to setup pdnsd</a></p>

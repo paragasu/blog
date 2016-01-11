@@ -1,0 +1,46 @@
+---
+layout: post
+title: extract text from ms office
+date: 2009-02-24 09:51:37.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- php
+tags:
+- catdoc
+- doc
+- extract text
+- ms office
+- php
+- ppt
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>Interesting program to extract text</p>
+<ul>
+<li> catdoc - extract text from ms word </li>
+<li> xls2cvs - extract text from ms excell </li>
+<li> pdftotext - extract text from pdf </li>
+<li> ppthtml - extract text from ms. power point </li>
+</ul>
+<p>Then a simple php function can capture the output eg:<br />
+<code><br />
+function extractWord($word_file)<br />
+{<br />
+    if (file_exists($word_file)<br />
+    {<br />
+        // prevent malicious command execution<br />
+        exec("/usr/bin/catdoc -w ' . escapeshellarg($word_file), $output);</p>
+<p>        // $output is an array corresponding to lines of output<br />
+        return join("\n", $output);<br />
+    }<br />
+}</p>
+<p></code></p>
+<p><a href="http://tech.forumone.com/archives/53-Extracting-text-from-Office-and-PDF-files.html">extracting text from office and pdf file</a></p>

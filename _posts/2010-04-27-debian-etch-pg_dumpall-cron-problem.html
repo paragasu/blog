@@ -1,0 +1,28 @@
+---
+layout: post
+title: Debian Etch pg_dumpall cron problem
+date: 2010-04-27 13:09:10.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- database
+tags:
+- cron
+- postgresl
+- root
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>Debian Etch default postgresql's superuser is postgres. And cron run as root.<br />
+Hence, pg_dumpall not working as expected in cron job. Workaround is to create user name root with superuser privilege.</p>
+<p><code><br />
+postgres# create role root with superuser login<br />
+</code></p>
+<p>p/s: you have to create database root</p>

@@ -1,0 +1,22 @@
+---
+layout: post
+title: resume transfer of large ssh file
+date: 2011-10-02 06:20:20.000000000 +08:00
+type: post
+published: true
+status: publish
+categories: []
+tags: []
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>you need to install rsync on both client and server</p>
+<p><code><br />
+apt-get install rsync<br />
+rsync -P -r -e ssh username@server: &lt;serverfile&gt; &lt;localfile&gt;</code></p>

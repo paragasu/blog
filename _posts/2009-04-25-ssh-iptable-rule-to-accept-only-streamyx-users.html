@@ -1,0 +1,30 @@
+---
+layout: post
+title: ssh - iptable rule to accept only streamyx users.
+date: 2009-04-25 17:22:15.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- ip range
+- iptables
+- streamyx
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>I got ssh brute force attack almost every day :p, which is almost all originated from somewhere outside malaysia (china, taiwan etc).  A simple iptables rules that only allowed tcp traffic from streamyx IP range.<br />
+<code><br />
+#iptables -P INPUT DROP<br />
+#iptables -A INPUT -p tcp --dport 80 -j ACCEPT<br />
+#iptables -A INPUT -p tcp --dport 22 -m iprange --src-range 60.0.0.0-60.255.255.255 -j ACCEPT</code></p>
+<p><a href="http://www.cyberciti.biz/tips/linux-iptables-how-to-specify-a-range-of-ip-addresses-or-ports.html"><br />
+iptables - how to specify a range of ip address </a><br />
+<a href="http://www.linuxhomenetworking.com/wiki/index.php/Quick_HOWTO_:_Ch14_:_Linux_Firewalls_Using_iptables">iptables quick howto</a>-</p>

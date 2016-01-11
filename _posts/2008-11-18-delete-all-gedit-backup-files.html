@@ -1,0 +1,27 @@
+---
+layout: post
+title: delete all gedit backup files
+date: 2008-11-18 07:11:37.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- delete
+- find
+- gedit
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>by default gedit will maintain a copy of files being edited with the prefix ~.</p>
+<p>it is irritating sometimes to have this files uploaded to the server. a simple way to delete this file will be<br />
+<code><br />
+$find . -name *~ -exec rm '{}' \;<br />
+</code></p>

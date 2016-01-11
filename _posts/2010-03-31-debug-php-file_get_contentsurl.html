@@ -1,0 +1,27 @@
+---
+layout: post
+title: debug php file_get_contents($url)
+date: 2010-03-31 13:04:23.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- php
+tags:
+- debug
+- file_get_contents
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>there is one special variable available $http_response_header.<br />
+the output is the header array reply by the server</p>
+<p><code><br />
+$r = file_get_contents($url);<br />
+var_dump($http_response_header);<br />
+</code></p>

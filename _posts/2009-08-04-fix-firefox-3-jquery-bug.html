@@ -1,0 +1,32 @@
+---
+layout: post
+title: fix Firefox 3 & jquery bug
+date: 2009-08-04 00:17:00.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- jquery
+tags:
+- ff3 jquery
+- ff3 jquery issues
+- firefox 3 jquery
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>It is the problem when the $(document).ready() executed before the CSS loaded.<br />
+Make sure all CSS come before the scripts</p>
+<p><code><br />
+&lt;script type="text/javascript" src=""&gt;<br />
+&lt;link rel="stylesheet" type="text/css" href=""&gt;</code></p>
+<p>to</p>
+<p><code><br />
+&lt;link rel="stylesheet" type="text/css" href=""&gt;<br />
+&lt;script type="text/javascript" src=""&gt;</code></p>
+<p><a href="http://groups.google.com/group/jquery-en/browse_thread/thread/95465c4025cfd73d">fix ff3 issues </a></p>

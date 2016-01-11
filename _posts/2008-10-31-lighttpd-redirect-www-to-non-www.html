@@ -1,0 +1,31 @@
+---
+layout: post
+title: lighttpd redirect www to non www
+date: 2008-10-31 12:49:30.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- Add new tag
+- lighttpd
+- redirect
+- www to non www
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>good SEO practice?<br />
+<code><br />
+$HTTP["host"] =~ "^www\.(.*)" {<br />
+url.redirect = ( "^/(.*)" =&gt; "http://%1/$1" )<br />
+}<br />
+</code><br />
+<a href="http://www.cyberciti.biz/tips/lighttpd-redirect-www-domaincom-to-domain-com.html"><br />
+more from cyberciti</a></p>

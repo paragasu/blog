@@ -1,0 +1,23 @@
+---
+layout: post
+title: php how to replace many space with one space
+date: 2009-10-25 16:17:19.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- php
+tags:
+- replace many space with one space
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+$str = preg_replace('/\s+/', ' ', $str); //"     \n\n\n" will end up as " \n"<br />
+$str = preg_replace('/\x20+/', ' ', $str); //only space </code></p>

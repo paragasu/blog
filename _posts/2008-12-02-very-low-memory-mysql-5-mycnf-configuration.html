@@ -1,0 +1,66 @@
+---
+layout: post
+title: very low memory mysql 5 my.cnf configuration
+date: 2008-12-02 03:42:53.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- low memory my.cnf
+- tiny my.cnf
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>on VPS server with very limited memory it is good to tweak mysql5. In /etc/mysql/my.cnf<br />
+<code><br />
+# Main MySQL server options<br />
+[mysqld]<br />
+port = 3306<br />
+socket = /var/run/mysqld/mysqld.sock</p>
+<p># No locking at all!<br />
+skip-locking</p>
+<p># Set internal buffers, caches and stacks very low<br />
+key_buffer = 16K<br />
+max_allowed_packet = 16K<br />
+table_cache = 1<br />
+sort_buffer_size = 16K<br />
+read_buffer_size = 16K<br />
+read_rnd_buffer_size = 1K<br />
+net_buffer_length = 1K<br />
+thread_stack = 16K</p>
+<p># Don't listen on a TCP/IP port at all.<br />
+# Will still work provided all access is done via localhost<br />
+skip-networking<br />
+server-id = 1</p>
+<p># Skip Berkley and Inno DB types<br />
+skip-bdb<br />
+skip-innodb</p>
+<p># Set the query cache low<br />
+query_cache_limit = 1048576<br />
+query_cache_size = 1048576<br />
+query_cache_type = 1</p>
+<p># Set various memory limits very low, disable memory-hogging extras<br />
+[mysqldump]<br />
+quick<br />
+max_allowed_packet = 16K<br />
+[mysql]<br />
+no-auto-rehash<br />
+[isamchk]<br />
+key_buffer = 16K<br />
+sort_buffer_size = 16K<br />
+[myisamchk]<br />
+key_buffer = 16K<br />
+sort_buffer_size = 16K<br />
+[mysqlhotcopy]<br />
+interactive-timeout<br />
+</code><br />
+<a href="http://www.aoakley.com/articles/2008-03-06-ubuntu-minimal-memory.php"><br />
+More info</a></p>

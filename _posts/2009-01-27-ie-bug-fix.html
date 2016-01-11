@@ -1,0 +1,38 @@
+---
+layout: post
+title: IE bug fix
+date: 2009-01-27 08:55:19.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Website
+tags:
+- ie bug fix
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>IE bug fix </p>
+<p>1. <a href="http://www.dustindiaz.com/min-height-fast-hack/">no min-height </a><br />
+<code>  _height:auto !important; </code></p>
+<p>2. preventing <a href="http://css-tricks.com/prevent-menu-stepdown/">step down </a><br />
+<code> float:left; display:inline;</code></p>
+<p>3. <a href="http://www.satzansatz.de/cssd/onhavinglayout.html">haslayout</a><br />
+<code><br />
+<!--[if lt IE 7]&gt;--><br />
+/* style for IE6 + IE5.5 + IE5.0 */<br />
+  .gainlayout { height: 0; }<br />
+<!--[if IE 7]&gt;--><br />
+  .gainlayout { zoom: 1; }<br />
+</code></p>
+<p>4. <a href="http://www.brownbatterystudios.com/sixthings/2007/01/06/css-first-aid-for-ie-peekaboo-bug/">peekaboo bug fix</a><br />
+<code><br />
+position: relative; /* peekaboo bug fix for IE6 */<br />
+min-width: 0; /* peekaboo bug fix for IE7 */<br />
+</code></p>

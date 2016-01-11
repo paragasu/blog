@@ -1,0 +1,30 @@
+---
+layout: post
+title: jquery click li to activate a
+date: 2009-11-06 17:56:50.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- jquery
+tags:
+- click li activate a
+- jquery
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code>&lt;ul class="menu"&gt;<br />
+&lt;li&gt;&lt;a href="/"&gt; Home &lt;/a&gt;&lt;/li&gt;<br />
+&lt;/ul&gt;</code></p>
+<p>to activate the link when user click on li<br />
+<code><br />
+$('.menu li').click(function(e){<br />
+location.href = $(this).find('a').attr('href');<br />
+});</code></p>
+<p>Now, user doesn't have to click on the "Home" to activate the link.</p>

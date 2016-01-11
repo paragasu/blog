@@ -1,0 +1,45 @@
+---
+layout: post
+title: How to find not unique row in the table
+date: 2008-10-08 12:15:09.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- database
+tags:
+- not unique row
+- postgresql
+- table
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+test=*# select * from dup;<br />
+ a | b<br />
+---+---<br />
+ 1 | 1<br />
+ 1 | 2<br />
+ 2 | 1<br />
+ 1 | 1<br />
+ 3 | 3<br />
+ 3 | 3<br />
+(6 rows)</p>
+<p>test=*# select * from dup where (ctid,a,b) not in (select distinct on (a,b) ctid,* from dup);<br />
+ a | b<br />
+---+---<br />
+ 1 | 1<br />
+ 3 | 3<br />
+(2 rows)<br />
+</code><br />
+another approach:<br />
+<code><br />
+select a,b from dup group by a,b having count(*) &gt; 1;<br />
+</code></p>
+<p><a href="http://archives.postgresql.org/pgsql-general/"> pgsql-general mailing list </a></p>

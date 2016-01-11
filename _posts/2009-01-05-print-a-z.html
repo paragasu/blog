@@ -1,0 +1,31 @@
+---
+layout: post
+title: print a-z
+date: 2009-01-05 02:16:47.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- php
+tags: []
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>I need to create a link from a to z. I come up with a simple way to do it.<br />
+<code><br />
+	/* a-z */<br />
+	$str = '';<br />
+	for($i = 65; $i &lt; 91; ++$i)<br />
+		echo '<a href="#">'.chr($i).'</a>';<br />
+</code><br />
+another way<br />
+<code><br />
+$a = range('a', 'z');<br />
+foreach($a as $chr) echo $chr;<br />
+</code></p>

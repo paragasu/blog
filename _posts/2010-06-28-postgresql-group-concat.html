@@ -1,0 +1,25 @@
+---
+layout: post
+title: postgresql group concat
+date: 2010-06-28 05:00:17.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- database
+tags: []
+meta:
+  _edit_last: '5225680'
+  _wp_old_slug: ''
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+select array_to_string(<br />
+         array(select name from tbl_user), ',');<br />
+</code><a href="http://www.designmagick.com/article/38/Group-Concat-In-PostgreSQL"></p>
+<p>group concat in postgresql</a></p>

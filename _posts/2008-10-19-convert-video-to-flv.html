@@ -1,0 +1,37 @@
+---
+layout: post
+title: convert video to flv
+date: 2008-10-19 05:28:49.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- programming
+tags:
+- convert video to flv
+- flash
+- flv
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>ffmpg and memcoder</p>
+<p><code><br />
+hardy2@hardy2-laptop:~$ cat .bin/video-flv_png<br />
+#!/bin/bash<br />
+filename="$@"<br />
+filename=${filename%.*}<br />
+ffmpeg -sameq -i "$@" -s 640x480 -ar 44100 -r 25 $filename.flv -pass 2<br />
+ffmpeg  -itsoffset -0  -i "$@" -vcodec png -vframes 1 -an -f rawvideo<br />
+-s 640x480 $filename.1.png<br />
+ffmpeg  -itsoffset -0.5  -i "$@" -vcodec png -vframes 1 -an -f<br />
+rawvideo -s 640x480 $filename.2.png<br />
+ffmpeg  -itsoffset -1  -i "$@" -vcodec png -vframes 1 -an -f rawvideo<br />
+-s 640x480 $filename.3.png<br />
+</code></p>
+<p>by<a href="http://dotanchoen.com"> dotanchoen.com</a></p>

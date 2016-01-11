@@ -1,0 +1,36 @@
+---
+layout: post
+title: Centos 5.4 MySQL only 480 error messages, but it should contain at least 641
+  error messages.
+date: 2010-06-24 10:32:36.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- 03 but it should contain at least 641 error messages.
+- centos 5.4 mysql5 errmsg.sys
+- had only 480 error messages
+meta:
+  _edit_last: '5225680'
+  _wp_old_slug: ''
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+Error message file '/usr/share/mysql/english/errmsg.sys' had only 480 error messages,<br />
+but it should contain at least 641 error messages.<br />
+</code></p>
+<p><code><br />
+#yum list installed | grep mysql </code></p>
+<p>In my case, the both package mysql.i386 and mysql.x86_64 is installed. So, i have to remove the mysql.i386 package (old version) and reinstall mysql.x86_64.</p>
+<p><code><br />
+#yum remove mysql.i386<br />
+#yum install --enablerepo=remi mysql.x86_64<br />
+#service mysqld start</code></p>
+<p>problem solved</p>

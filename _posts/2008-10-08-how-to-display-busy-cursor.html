@@ -1,0 +1,42 @@
+---
+layout: post
+title: how to display busy cursor
+date: 2008-10-08 05:24:06.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- gtk
+tags:
+- application
+- gtk
+- set displayed cursor
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>interesting post on gtk-app-devel-list@gnome.org mailing list<br />
+<code><br />
+void busy_stuff ()<br />
+{<br />
+   GdkDisplay *display;<br />
+   GdkCursor *cursor;<br />
+   GdkWindow *window;<br />
+   gint x, y;</p>
+<p>   cursor = gdk_cursor_new(GDK_WATCH);</p>
+<p>   display = gdk_display_get_default();<br />
+   window = gdk_display_get_window_at_pointer(disp, &amp;x, &amp;y);</p>
+<p>   gdk_window_set_cursor(window, cursor);<br />
+   gdk_display_sync(display);<br />
+   gdk_cursor_unref(cursor);</p>
+<p>   /* do time-consuming stuff here */</p>
+<p>   gdk_window_set_cursor(window, NULL);<br />
+}<br />
+</code></p>
+<p>gdk_cursor_unref() prevent memory leak</p>
+<p><a href="http://mail.gnome.org/archives/gtk-devel-list/"> Mailing list archive </a></p>

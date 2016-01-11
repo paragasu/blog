@@ -1,0 +1,35 @@
+---
+layout: post
+title: mssql not a valid ss_sqlsrv_stmt resource
+date: 2013-08-13 10:35:56.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- database
+tags: []
+meta:
+  _edit_last: '5225680'
+  _publicize_pending: '1'
+  geo_public: '0'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>It happen when i have a code like below<br />
+<code><br />
+function connect()<br />
+{<br />
+     return sqlsrv_connect(..);<br />
+}<br />
+..<br />
+$result = sqlsrv_query(connect(), $sql);<br />
+</code></p>
+<p>The error mysteriously went away when i change the code to this<br />
+<code><br />
+$connect = connect();<br />
+$result  = sqlsrv_query($connec, $sql);<br />
+</code></p>

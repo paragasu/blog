@@ -1,0 +1,40 @@
+---
+layout: post
+title: pdns everydns.net as secondary dns
+date: 2009-05-08 04:18:49.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- everydns
+- pdns
+- powerdns
+- secondary dns
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>in /etc/powerdns/pdns.conf<br />
+<code><br />
+allow-axfr-ips=71.6.202.218,66.240.223.182<br />
+disable-axfr=no<br />
+disable-tcp=no<br />
+master=yes</code></p>
+<p>make sure you insert the value 'MASTER' on the column 'type' in the domains table </p>
+<p>add the domain with advance option "make secondary using", and specify the primary dns (server ip where you install powerdns).</p>
+<p>the last thing to do is to modify the domain dns records to<br />
+<code><br />
+ns1.everydns.net<br />
+ns2.everydns.net<br />
+ns3.everydns.net<br />
+ns4.everydns.net<br />
+</code></p>
+<p><a href="http://blog.nachtarbeiter.net/2009/04/23/powerdns-on-debian-lenny-sarge-or-woody-2/"><br />
+powerdns on debian lenny</a></p>

@@ -1,0 +1,43 @@
+---
+layout: post
+title: Install sun-java6-jdk in debian wheezy
+date: 2012-01-12 13:37:06.000000000 +08:00
+type: post
+published: true
+status: publish
+categories: []
+tags: []
+meta:
+  _edit_last: '5225680'
+  _oembed_67ecda2d1246af17efaf3331730f1f6e: "{{unknown}}"
+  _oembed_bdba4824421c850cdde72fe7a62b7547: "{{unknown}}"
+  _oembed_f4b8491d6792c1027eabb9a0770b3899: "{{unknown}}"
+  _oembed_9e15ca52d1582b47b9877e69234bf535: "{{unknown}}"
+  _oembed_95537a49766f04a38199beb5e9615fbf: "{{unknown}}"
+  _oembed_8d5c462fe7fd39670c7fe7986a59d378: "{{unknown}}"
+  _oembed_7c396c1dbb30fa0bdbeea2f2c2dcb908: "{{unknown}}"
+  _oembed_49b4327cae6df34df81a9cedfb3f2ccc: "{{unknown}}"
+  _oembed_6bf68854c175077c75e6734ba31ee8db: "{{unknown}}"
+  _oembed_332e9faca93581e5347cdcb5612d3948: "{{unknown}}"
+  _oembed_4c513f8867d8acdad720c81337ce5a16: "{{unknown}}"
+  _oembed_2e8215fd77f6e257a01c99712533e64c: "{{unknown}}"
+  _oembed_adc105802cbb904e12c42ee8256047a1: "{{unknown}}"
+  _oembed_6a882c9d6bbc6454a4f0540ea8927033: "{{unknown}}"
+  _oembed_08be55ebf4c2cfe9cf72a0557cfbdfe8: "{{unknown}}"
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>Install sun-java6-jdk in debian wheezy</p>
+<p>sun-java6-jdk no longer available in debian wheezy due to some licencing issues.</p>
+<p>Download the binary called Java SE 6 Update 30 at<br />
+http://www.oracle.com/technetwork/java/javase/downloads/index.html</p>
+<p>unpack it to /opt/jvm/<br />
+<code><br />
+#update-alternatives --install /usr/bin/java java  /opt/jvm/jdk1.6.0_30/jre/bin/java 3<br />
+#update-alternatives --config java<br />
+</code></p>
+<p>select the option 3 and you are done</p>

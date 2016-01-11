@@ -1,0 +1,43 @@
+---
+layout: post
+title: NEC Versa S5500 + Intel PRO/wireless 4695 AG driver
+date: 2008-11-24 07:05:12.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- debian
+- intel 4695
+- nic versa s5500
+- pro/wireless
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>you must install the <strong>kernel 2.6.26-1-686</strong>, <strong>wpasupplicant</strong> and <strong>firmware-iwlwifi</strong>, <strong>wireless-tools</strong> to get intel pro/wireless 4695 to work. </p>
+<p>then in /etc/network/interfaces<br />
+<code><br />
+#auto wlan0<br />
+iface wlan0 inet dhcp<br />
+pre-up (echo ‘Modprobing iwl4965′) &amp;&amp; /sbin/modprobe iwl4965<br />
+post-down (echo ‘Removing iwl4965′) &amp;&amp; /sbin/modprobe -r iwl4965<br />
+wpa-ssid YOURNETNAMEAKASID<br />
+wpa-key_mgmt WPA-PSK<br />
+wpa-proto WPA<br />
+wpa-pairwise TKIP<br />
+wpa-group TKIP<br />
+wpa-psk “yourpassphrase”<br />
+wpa-driver wext<br />
+</code></p>
+<p>to activate the wireless driver<br />
+<code><br />
+#ifup wlan0<br />
+</code> </p>
+<p><a href="http://blog.sviluppoweb.eu/2008/09/27/intel-corporation-prowireless-4965-ag-or-agn-hp-notebook-dv2690el-debian-linux/">more info </a></p>

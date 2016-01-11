@@ -1,0 +1,28 @@
+---
+layout: post
+title: how to change label font color
+date: 2008-10-16 02:01:44.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- gtk
+tags:
+- change font color
+- gtk_label_set_markup
+- pango
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>by using gtk_label_set_markup() </p>
+<p>or </p>
+<p><code>GdkColor color;<br />
+gdk_color_parse("red", &amp;color);<br />
+gtk_widget_modify_fg(widget, GTK_STATE_NORMAL, &amp;color);</code></p>
+<p><a href="http://library.gnome.org/devel/pango/stable/PangoMarkupFormat.html">more about pango markup format</a></p>

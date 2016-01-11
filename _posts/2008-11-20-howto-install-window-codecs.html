@@ -1,0 +1,29 @@
+---
+layout: post
+title: howto install window codecs
+date: 2008-11-20 08:20:03.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags: []
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>You cannot play *.avi files with win32codecs. You definitely need one. </p>
+<p>edit you /etc/apt/sources.list<br />
+<code><br />
+ deb http://ftp.tw.debian.org/debian-multimedia/ stable main<br />
+</code></p>
+<p><code><br />
+#apt-get update<br />
+#apt-get install win32codecs<br />
+</code></p>
+<p>you can use any mirror from <a href="http://debian-multimedia.org/debian-m.php">debian-multimedia.org</a>. I am using Taiwan mirror servers because it is quite fast, considering that i am in kota kinabalu.</p>

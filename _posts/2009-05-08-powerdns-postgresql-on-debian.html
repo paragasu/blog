@@ -1,0 +1,38 @@
+---
+layout: post
+title: powerdns + postgresql on debian
+date: 2009-05-08 04:59:41.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- debian
+- powerdns postgresql
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+#apt-get install pdns-server<br />
+#apt-get install pdns-backend-pgsql</code></p>
+<p>install required postgresql database table. <br />
+using  /usr/share/doc/pdns-backend/pgsql/pgsql.sql </p>
+<p>edit /etc/powerdns/pdns.d/pdns.local ( /usr/share/doc/pdns-backend-pgsql/examples/pdns.local.pgsql)<br />
+<code><br />
+gpgsql-host=localhost<br />
+gpgsql-port=5432<br />
+gpgsql-dbname=powerdns<br />
+gpgsql-user=<br />
+gpgsql-password=</code></p>
+<p>edit /etc/powerdns/pdns.conf<br />
+<code><br />
+launch=gpgsql</code></p>
+<p><a href="http://blog.nachtarbeiter.net/2009/04/23/powerdns-on-debian-lenny-sarge-or-woody-2/"><br />
+postgresql + mysql</a></p>

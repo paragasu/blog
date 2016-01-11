@@ -1,0 +1,34 @@
+---
+layout: post
+title: Qooxdoo change global application font size
+date: 2015-06-29 16:13:04.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- javascript
+- Qooxdoo
+tags:
+- change font size
+- qooxdoo
+meta:
+  _edit_last: '5225680'
+  geo_public: '0'
+  _publicize_job_id: '12153595090'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+         setFontSize: function(size)<br />
+         {<br />
+             var doc         = this.getRoot();<br />
+             var manager     = qx.theme.manager.Font.getInstance();<br />
+             var defaultFont = manager.resolve(doc.getFont());<br />
+             var newFont     = defaultFont.clone().setSize(parseInt(size));</p>
+<p>             doc.setFont(newFont);<br />
+         },<br />
+<code /></code></p>

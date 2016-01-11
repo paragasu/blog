@@ -1,0 +1,30 @@
+---
+layout: post
+title: jquery click() doesn't work after dom update on ajax call.
+date: 2010-01-01 13:52:24.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- jquery
+tags:
+- jquery dom change stop working ajax
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+&lt;a class="clickme" href=#&gt;clickme&lt;/a&gt; </code></p>
+<p><code><br />
+$('a.clickme').click(function(){ alert('hello')}); </code><br />
+only work on DOM that already exists. it is not working.if the html above injected on existing DOM.<br />
+in this case you have to use.</p>
+<p><code><br />
+$('a.clickme').live('click', function(){alert('hello')});</code></p>
+<p><a href="http://docs.jquery.com/Events/live">jquery live</a><br />
+<a href="http://spreadyourwealth.blogspot.com/2009/04/jquery-events-not-firing-for-dynamic.html">jquery events not firing on dynamics</a></p>

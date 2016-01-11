@@ -1,0 +1,31 @@
+---
+layout: post
+title: get imagemagick to work on php5 + lighttpd
+date: 2008-10-31 04:24:36.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- imagick
+- php5-imagick
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>somehow #apt-get install php5-imagick simply doesn't work. <br />
+The right way,<br />
+<code><br />
+#apt-get install imagemagick<br />
+#aptitude install make php5-dev php-pear<br />
+#aptitude remove php5-imagick<br />
+#aptitude install libmagick9-dev<br />
+#pecl install imagick<br />
+</code></p>
+<p><a href="http://kevin.vanzonneveld.net/techblog/article/class_imagick_not_found/">Thanks to Kevin for this solutions</a></p>

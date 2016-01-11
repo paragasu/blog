@@ -1,0 +1,40 @@
+---
+layout: post
+title: mysql prepared statement
+date: 2008-12-28 07:50:45.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- database
+tags:
+- mysql
+- prepared statement
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>Prepared statement is one good way to avoid sql injection.<br />
+<code><br />
+mysql&gt; PREPARE stmt_name FROM "SELECT name FROM Country WHERE code = ?";<br />
+Query OK, 0 rows affected (0.09 sec)<br />
+Statement prepared</p>
+<p>mysql&gt; SET @test_parm = "FIN";<br />
+Query OK, 0 rows affected (0.00 sec)</p>
+<p>mysql&gt; EXECUTE stmt_name USING @test_parm;<br />
++---------+<br />
+| name    |<br />
++---------+<br />
+| Finland |<br />
++---------+<br />
+1 row in set (0.03 sec)</p>
+<p>mysql&gt; DEALLOCATE PREPARE stmt_name;<br />
+Query OK, 0 rows affected (0.00 sec)<br />
+</code></p>
+<p><a href="http://dev.mysql.com/tech-resources/articles/4.1/prepared-statements.html"><br />
+More</a></p>

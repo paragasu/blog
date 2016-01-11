@@ -1,0 +1,30 @@
+---
+layout: post
+title: postgresql complete backup
+date: 2009-04-22 16:44:29.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- database
+tags:
+- backup
+- pg_dumpall
+- postgresql
+- restore
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>run command under user postgres</p>
+<p>to backup<br />
+<code><br />
+$pg_dumpall &gt; db.sql </code></p>
+<p>to restore<br />
+<code><br />
+$psql -f db.sql template1</code></p>

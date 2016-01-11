@@ -1,0 +1,24 @@
+---
+layout: post
+title: php get the number of days between two dates
+date: 2009-10-02 09:45:10.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- php
+tags:
+- number of days between two dates
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+$timestamp = strtotime($end_date) - strtotime($start_date);<br />
+$days = round($timestamp / 86400); </code></p>
+<p>this code only works on linux box.</p>

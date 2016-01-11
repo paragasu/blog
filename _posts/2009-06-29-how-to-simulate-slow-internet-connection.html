@@ -1,0 +1,28 @@
+---
+layout: post
+title: how to simulate slow internet connection
+date: 2009-06-29 16:03:46.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+- Website
+tags:
+- simulate slow internet connection
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+#apt-get install iprelay<br />
+$iprelay -b 2500 8000:localhost:80</code></p>
+<p>point the browser to localhost:8000<br />
+you can see how website look like with connection speed of 2.5Kbps.<br />
+<a href="http://stackoverflow.com/questions/473465/firefox-plugin-to-simulate-slow-internet-connection"><br />
+simulate slow internet connection</a></p>

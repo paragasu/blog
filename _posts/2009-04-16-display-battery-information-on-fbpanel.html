@@ -1,0 +1,37 @@
+---
+layout: post
+title: display battery information on fbpanel
+date: 2009-04-16 03:36:27.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- acpi
+- battery
+- fbpanel
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>i wrote a simple plugin to display the percentage of battery on fbpanel (i am using openbox + debian)</p>
+<p>put this code inside ~/.config/fbpanel/default<br />
+<code><br />
+Plugin {<br />
+type=genmon<br />
+config {<br />
+Command =  echo $(acpi -b | cut -d, -f2)<br />
+PollingTime = 2<br />
+TextSize = small<br />
+TextColor = red<br />
+}<br />
+}<br />
+</code><br />
+this is how it look like<br />
+<img src="{{ site.baseurl }}/assets/battery.jpg" alt="fbpanel battery status" title="battery" width="381" height="86" class="size-full wp-image-321" /></p>

@@ -1,0 +1,28 @@
+---
+layout: post
+title: upgrade debian etch 4.0 to lenny 5.0
+date: 2010-09-20 00:39:17.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags: []
+meta:
+  _edit_last: '5225680'
+  _wp_old_slug: ''
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>Debian drop security support for etch.<br />
+Edit /etc/apt/sources.list &amp; change all etch to lenny</p>
+<p><code><br />
+#apt-get update<br />
+#apt-get install apt dpkg aptitude<br />
+#aptitude keep-all<br />
+#aptitude full-upgrade<br />
+</code></p>

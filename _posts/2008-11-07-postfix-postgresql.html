@@ -1,0 +1,44 @@
+---
+layout: post
+title: postfix + postgresql
+date: 2008-11-07 03:15:21.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- aliases
+- postfix
+- postfix+postgresql
+- postgresql
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>we can use postgresql to store postfix configuration.<br />
+<code><br />
+#apt-get install postfix postfix-pgsql<br />
+</code><br />
+edit the configuration /etc/postfix/main.cf<br />
+<code><br />
+   alias_maps = pgsql:/etc/postfix/pgsql-aliases.cf<br />
+</code><br />
+then in /etc/postfix/pgsql-aliases.cf<br />
+<code><br />
+host =<br />
+username=<br />
+password=<br />
+db_name=<br />
+query=<br />
+select_field=<br />
+table=<br />
+where_field=<br />
+additional_conditions=<br />
+</code><a href="http://www.postfix.org/PGSQL_README.html"></p>
+<p>more from postfix documentation</a></p>

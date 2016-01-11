@@ -1,0 +1,42 @@
+---
+layout: post
+title: magical square root
+date: 2008-10-10 00:21:43.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- programming
+tags:
+- quark III
+- square root
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p><code><br />
+/*<br />
+================<br />
+SquareRootFloat<br />
+================<br />
+*/<br />
+float SquareRootFloat(float number) {<br />
+    long i;<br />
+    float x, y;<br />
+    const float f = 1.5F;</p>
+<p>    x = number * 0.5F;<br />
+    y  = number;<br />
+    i  = * ( long * ) &y;<br />
+    i  = 0x5f3759df - ( i &gt;&gt; 1 );<br />
+    y  = * ( float * ) &i;<br />
+    y  = y * ( f - ( x * y * y ) );<br />
+    y  = y * ( f - ( x * y * y ) );<br />
+    return number * y;<br />
+}<br />
+</code></p>
+<p><a href="http://www.codemaestro.com/reviews/9"> Original article from code maestro </a></p>

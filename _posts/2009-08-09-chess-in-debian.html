@@ -1,0 +1,40 @@
+---
+layout: post
+title: chess in debian
+date: 2009-08-09 05:16:19.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- chess in debian
+- chess in linux
+- crafty
+- debian
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>Crafty, developed by Robert Hyatt, is a descendant of the Cray Blitz chess engine that was the World Computer Chess Champion from 1983 to 1989.</p>
+<p>to install<br />
+<code><br />
+#apt-get install crafty xboard</code></p>
+<p>start the game with<br />
+<code><br />
+$xboard -fcb 'crafty' -fd crafty_directory </code></p>
+<p>book off -- This options disables the use of opening book for crafty.<br />
+ponder off - Crafty can't think while you are playing your move.<br />
+st 1 -- Make the maximum thinking time for Crafty just one second.<br />
+sd n -- Crafty won't think more than n moves ahead.<br />
+If you are able to beat crafty too often, you can also make it more stronger with these options:<br />
+hash nK -- Makes the hash table bigger<br />
+hashp n -- Makes the hash table for pawns as large as possible</p>
+<p>it hard to bet.</p>
+<p><a href="http://www.craftychess.com/"><br />
+more info</a></p>

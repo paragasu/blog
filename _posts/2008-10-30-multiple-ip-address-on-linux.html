@@ -1,0 +1,32 @@
+---
+layout: post
+title: multiple ip address on linux
+date: 2008-10-30 09:06:36.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- debian etch
+- ip
+- multiple ip
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>debian etch </p>
+<p><code><br />
+#ifconfig eth0:1 192.168.1.7<br />
+#ifconfig eth0:2 192.168.1.8<br />
+</code><br />
+<br />
+restart the networking service<br />
+<code><br />
+#/etc/init.d/networking restart<br />
+</code></p>

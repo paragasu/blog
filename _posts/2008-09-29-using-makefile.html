@@ -1,0 +1,47 @@
+---
+layout: post
+title: Using Makefile
+date: 2008-09-29 03:22:12.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- gtk
+tags:
+- c
+- gtk
+- Linux
+- make
+- makefile
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>If you writing gtk application. You will have to use more than one source file to make the code more manage able. To compile the application you need to use make.</p>
+<p>[caption id="attachment_63" align="alignnone" width="411" caption="makefile tutorial"]<a href="http://paragasu.files.wordpress.com/2008/10/makefile.jpeg"><img class="size-full wp-image-63" title="makefile" src="{{ site.baseurl }}/assets/makefile.jpeg" alt="makefile tutorial" width="411" height="528" /></a>[/caption]</p>
+<p>It is all you need to compile a c code with libgnomedb. This code will output an executable<br />
+file with name ekoken. A more complicated makefiles using variable is like this</p>
+<p><code><br />
+CC = gcc<br />
+LD = gcc<br />
+CFLAGS =<br />
+RM = rm -f<br />
+LDFLAGS = `pkg-config --libs gtk+-2.0`</code></p>
+<p>PROG =<br />
+OBJS =</p>
+<p>all : $(PROG)</p>
+<p>%.o : %.c<br />
+$(CC) $(CFLAGS) -c $&lt; -o $@</p>
+<p>$(PROG) : $(OBJS)<br />
+$(LD) $(LDFLAGS) $(OBJS) -o $(PROG)</p>
+<p>clean :<br />
+$(RM) $(OBJS) $(PROG)</p>
+<p>Where PROG is the executable output and OBJS is the object file output with .o suffix.</p>
+<p>You can read more from this link<br />
+<a href="http://helpdesk.cs.tamu.edu/docs/makeFile"> Makefile in C or C++ </a><br />
+<a href="http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/"> A simple makefile tutorial </a></p>

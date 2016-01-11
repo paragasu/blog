@@ -1,0 +1,29 @@
+---
+layout: post
+title: copy files 100 times
+date: 2008-12-28 07:20:50.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags: []
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>Some interesting question asked on mailing list. A few interesting solutions in bash script.<br />
+<code><br />
+$for x in $(seq -w 1 100); do cp file.jpg file${x}.jpg; done<br />
+</code><br />
+<code><br />
+for I in {1..100}; do cp file.jpg file$I.jpg ; done<br />
+</code><br />
+<code><br />
+$ seq -w 1 1 10 | xargs -i -n1 cp file.jpg file{}.jpg<br />
+</code></p>

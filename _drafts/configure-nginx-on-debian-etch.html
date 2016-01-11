@@ -1,0 +1,25 @@
+---
+layout: post
+title: configure nginx on debian etch
+date: 
+type: post
+published: false
+status: draft
+categories: []
+tags: []
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>in ngix php $_SERVER['SERVER_NAME'] do not reflect the real domain name.<br />
+edit the file /etc/nginx/fastcgi_params.<br />
+change fastcgi_param SERVER_NAME $server_name to<br />
+<code><br />
+fastcgi_param SERVER_NAME $host;</code></p>
+<p><a href="http://blog.taragana.com/index.php/archive/tips-on-configuring-nginx-for-virtual-hosting/"><br />
+tips on configuring nginx virtual hosting</a></p>

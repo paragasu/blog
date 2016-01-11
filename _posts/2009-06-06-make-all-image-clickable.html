@@ -1,0 +1,28 @@
+---
+layout: post
+title: make all image clickable
+date: 2009-06-06 14:45:55.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- php
+tags:
+- preg_replace
+- replace img with link
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>make all image in a page to have a direct link.</p>
+<p><code><br />
+$content = ''; //content of a page with &lt;img tag<br />
+$content =  preg_replace('/&lt;img alt=".*" \/&gt;/',<br />
+'&lt;a href="\\1"&gt;\&lt;/a&gt;', $content);<br />
+</code></p>
+<p><a href="http://www.php.net/preg_replace">preg_replace manual</a></p>

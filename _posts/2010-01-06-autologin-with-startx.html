@@ -1,0 +1,32 @@
+---
+layout: post
+title: autologin with startx
+date: 2010-01-06 03:23:38.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- autologin debian
+- startx
+meta:
+  _edit_last: '5225680'
+author:
+  login: paragasu
+  email: paragasu@gmail.com
+  display_name: paragasu
+  first_name: ''
+  last_name: ''
+---
+<p>edit /etc/inittab<br />
+comment out the line<br />
+<code><br />
+#1:2345:respawn:/sbin/getty 38400 tty1 </code><br />
+add the line<br />
+<code><br />
+1:2345:respawn:/bin/login -f YOUR_USER_NAME tty1 /dev/tty1 2&gt;&amp;1</code></p>
+<p>edit the .bash_profile and add<br />
+<code><br />
+startx</code><a href="http://www.debianadmin.com/how-to-auto-login-and-startx-without-a-display-manager-in-debian.html"></p>
+<p>autologin in debian</a></p>
