@@ -4,12 +4,20 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+I am a programmer & linux system admin based in Kota Kinabalu, Sabah.  
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+I start doing programming for fun, toying with html and then VB6 back in 2002.  
+Fall in love with Linux (Debian) in 2005.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Then been coding PHP since 2007 when i started my own company and being self-employed for 8 years.
+
+Now i am into Nodejs, NativeScript, qooxdoo, reactjs, angular2 and working on mobile app helping  
+a friend to build his startup company.
+
+I am facinated with high scalabily platform like Erlang/OTP, Golang and Nginx+Lua (OpenResty),  
+functional programming & parallel computing.
+
+On my freetime i do jungle trekking, camping, free diving, dancing salsa & tango and volunteering.
+
+
+
