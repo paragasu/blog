@@ -18,4 +18,4 @@ permalink: /:year/:month/:day/:title
 # Build settings
 markdown: kramdown
 
-destination: /home/rogon/paragasu.github.io
+destination: /home/paragasu/workspace/paragasu.github.io
