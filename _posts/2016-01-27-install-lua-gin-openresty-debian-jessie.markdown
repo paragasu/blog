@@ -29,7 +29,7 @@ Install gin framework
 
 Related  
 [OpenResty](http://openresty.org/)  
-[Gin Json Api framework](http://gin.io)
+[Gin JSON API framework](http://gin.io)
 
 
 
