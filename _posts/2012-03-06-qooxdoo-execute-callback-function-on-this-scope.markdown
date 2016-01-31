@@ -17,7 +17,7 @@ author:
   first_name: ''
   last_name: ''
 ---
-<p><code><br />
-rpc.callAsync(qx.lang.Function.bind(this._responseReceived, that));<br />
-</code></p>
-<p>now you can refer this in _responseReceived Functions.</p>
+
+	rpc.callAsync(qx.lang.Function.bind(this._responseReceived, that));  
+
+Now you can refer this in _responseReceived Functions.
