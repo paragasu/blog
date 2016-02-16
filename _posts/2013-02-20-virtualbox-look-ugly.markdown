@@ -1,6 +1,6 @@
 ---
 layout: post
-title: virtualbox look ugly
+title: Virtualbox look ugly
 date: 2013-02-20 17:03:57.000000000 +08:00
 type: post
 published: true
@@ -20,9 +20,12 @@ author:
   first_name: ''
   last_name: ''
 ---
-<p>virtualbox made with qt library. To fix the ugly win95 looking theme,<br />
-<code><br />
-#aptitude install qt4-qtconfig<br />
-$qtconfig<br />
-</code></p>
-<p>and change the Gui Style to GTK+</p>
+Virtualbox made with qt library. To fix the ugly win95 looking theme,
+
+    #aptitude install qt4-qtconfig
+    $qtconfig
+
+
+and change the Gui Style to GTK+
+
+

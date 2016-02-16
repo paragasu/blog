@@ -18,7 +18,8 @@ author:
   first_name: ''
   last_name: ''
 ---
-<p>some unexpected stuff</p>
-<p><code><br />
-var_dump('f' == 0); //bool(true)<br />
-</code></p>
+Some unexpected stuff
+
+    var_dump('f' == 0); //bool(true)
+
+

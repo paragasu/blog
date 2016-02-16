@@ -1,6 +1,6 @@
 ---
 layout: post
-title: disable tabview page
+title: Qooxdoo disable tabview page
 date: 2012-09-29 04:10:30.000000000 +08:00
 type: post
 published: true
@@ -15,11 +15,9 @@ author:
   login: paragasu
   email: paragasu@gmail.com
   display_name: paragasu
-  first_name: ''
-  last_name: ''
 ---
-<p>Here is a way to disable the tabview page. Turn it grey and unclickable.</p>
-<p><code><br />
-var page = new qx.ui.tabview.Page("page");<br />
-page.set({enabled: false});<br />
-</code></p>
+
+Here is a way to disable the tabview page. Turn it grey and unclickable.
+
+    var page = new qx.ui.tabview.Page("page");
+    page.set({enabled: false});

@@ -19,10 +19,9 @@ author:
   first_name: ''
   last_name: ''
 ---
-<p>[code]<br />
-&lt;div class=&quot;row&quot;&gt;<br />
-&lt;div class=&quot;small-8 small-centered large-4 large-uncentered columns&quot;&gt;<br />
- &lt;img src=&quot;logo.png&quot; /&gt;<br />
-&lt;/div&gt;<br />
-&lt;/div&gt;<br />
-[/code]</p>
+
+    <div class="row">;
+    <div class="small-8 small-centered large-4 large-uncentered columns">
+    <img src="logo.png" />
+    </div>
+    </div>

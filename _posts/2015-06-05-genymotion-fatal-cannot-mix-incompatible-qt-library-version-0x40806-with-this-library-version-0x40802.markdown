@@ -22,12 +22,13 @@ author:
   first_name: ''
   last_name: ''
 ---
-<p>Go into genymotion installation directory<br />
-<code><br />
-#cd /opt/genymotion<br />
-</code><code><br />
-#aptitude install libxi-dev libxmu-dev<br />
-#mkdir QtLibs<br />
-#mv *Qt*.so* QtLibs<br />
-<code></code></code></p>
-<p>for more info <a title="Ubuntu Forums" href="http://ubuntuforums.org/showthread.php?t=2207219&amp;p=13048000#post13048000"> Ubuntu Forums </a></p>
+
+Go into genymotion installation directory
+
+    #cd /opt/genymotion
+    #aptitude install libxi-dev libxmu-dev
+    #mkdir QtLibs
+    #mv *Qt*.so* QtLibs
+
+Related  
+[Ubuntu Forums](http://ubuntuforums.org/showthread.php?t=2207219&amp;p=13048000#post13048000)

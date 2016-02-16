@@ -18,10 +18,14 @@ author:
   first_name: ''
   last_name: ''
 ---
-<p>Using SCOPE_IDENTITY(), </p>
-<p><code><br />
-$result = sqlsrv_query($conn, 'INSERT INTO mytable(name) values ('hello world') ; SELECT SCOPE_IDENTITY() AS ID', array(), $option);<br />
-sqlsrv_next_result();<br />
-$row = sqlsrv_fetch_object($result);</p>
-<p>echo $row-&gt;ID; //last insert id<br />
-</code></p>
+
+Using SCOPE_IDENTITY(),
+
+    $result = sqlsrv_query($conn, 'INSERT INTO mytable(name) values ('hello world') ; 
+                                   SELECT SCOPE_IDENTITY() AS ID', array(), $option);
+    sqlsrv_next_result();
+
+    $row = sqlsrv_fetch_object($result);
+    echo $row->ID; //last insert id
+
+

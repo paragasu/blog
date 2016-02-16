@@ -1,6 +1,6 @@
 ---
 layout: post
-title: change default browser
+title: Change default browser
 date: 2013-03-10 01:20:38.000000000 +08:00
 type: post
 published: true
@@ -16,9 +16,6 @@ author:
   login: paragasu
   email: paragasu@gmail.com
   display_name: paragasu
-  first_name: ''
-  last_name: ''
 ---
-<p><code><br />
-#update-alternatives --config x-www-browser<br />
-</code></p>
+
+    #update-alternatives --config x-www-browser
