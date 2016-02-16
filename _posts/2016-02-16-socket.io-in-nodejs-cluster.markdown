@@ -7,6 +7,7 @@ categories: nodejs
 
 Running nodejs in cluster is a bit tricky. We need to make sure the same
 worker handle the same connection from the same client.  
+
 To make life a little bit easier, we can use [Sticky Session](https://github.com/indutny/sticky-session)
 
     $npm install sticky-session 
