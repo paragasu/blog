@@ -27,5 +27,5 @@ From address must be registered and verified as sender.
 
 
 Related  
-[Mail configuration on a self hosted ghost](http://support.ghost.org/mail)
+[Mail configuration on a self hosted ghost](http://support.ghost.org/mail)  
 [Mail github source](https://github.com/TryGhost/Ghost/blob/master/core/server/mail/index.js)
