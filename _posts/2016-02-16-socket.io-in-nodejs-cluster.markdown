@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Socket.io in nodejs cluster"
+date: 2016-02-16 15:31:00 +0800  
+categories: nodejs
+---
+
+Running nodejs in cluster is a bit tricky. We need to make sure the same
+worker handle the same connection from the same client.  
+To make life a little bit easier, we can use [Sticky Session](https://github.com/indutny/sticky-session)
+
+    $npm install sticky-session 
+
+And we need to use socket.io-redis to make sure we can send message 
+to socket handle by different workers.
+
+    $npm install socket.io-redis
+
+
+Related  
+[Sticky Session](https://github.com/indutny/sticky-session)  
+[Using multiple nodes](http://socket.io/docs/using-multiple-nodes)  
+[Node cluster socket.io](https://github.com/elad/node-cluster-socket.io)
+
+
+
