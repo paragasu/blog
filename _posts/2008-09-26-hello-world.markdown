@@ -15,12 +15,10 @@ author:
   login: paragasu
   email: paragasu@gmail.com
   display_name: paragasu
-  first_name: ''
-  last_name: ''
 ---
-<p>i think it is better to start with</p>
-<p><code><br />
-&lt;?<br />
-php echo "hello world";<br />
-?&gt;<br />
-</code></p>
+I think it is better to start with
+
+    <?
+    php echo "hello world";
+    ?>
+

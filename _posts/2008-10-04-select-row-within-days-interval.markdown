@@ -1,6 +1,6 @@
 ---
 layout: post
-title: select row within days interval
+title: Select row within days interval
 date: 2008-10-04 00:54:01.000000000 +08:00
 type: post
 published: true
@@ -17,9 +17,6 @@ meta:
 author:
   login: paragasu
   email: paragasu@gmail.com
-  display_name: paragasu
-  first_name: ''
-  last_name: ''
 ---
-<p>
-SELECT * FROM mytable WHERE mydate &gt; DATE_SUB(now(),INTERVAL 7 DAYS)</p>
+
+    SELECT * FROM mytable WHERE mydate > DATE_SUB(now(),INTERVAL 7 DAYS)
