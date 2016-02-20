@@ -18,16 +18,17 @@ meta:
 author:
   login: paragasu
   email: paragasu@gmail.com
-  display_name: paragasu
-  first_name: ''
-  last_name: ''
 ---
-<p>1. Connect using USB<br />
-<code><br />
-$adb tcpip 5555<br />
-</code></p>
-<p>2. Disconnect USB<br />
-3. Reconnect using wireless connection. You can find out the IP address from wireless config<br />
-<code><br />
-$adb connect 192.168.1.3:5555<br />
-</code></p>
+
+Connect using USB.
+
+    $adb tcpip 5555
+
+Disconnect USB.  
+
+Reconnect using wireless connection. You can find out the IP address from wireless config
+
+    $adb connect 192.168.1.3:5555
+
+
+

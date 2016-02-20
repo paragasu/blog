@@ -1,6 +1,6 @@
 ---
 layout: post
-title: cloning object in qooxdoo
+title: Cloning object in qooxdoo
 date: 2012-09-03 14:35:11.000000000 +08:00
 type: post
 published: true
@@ -14,16 +14,16 @@ author:
   login: paragasu
   email: paragasu@gmail.com
   display_name: paragasu
-  first_name: ''
-  last_name: ''
 ---
-<p>Object<br />
-<code><br />
-var a = {};<br />
-var b = qx.lang.Object.clone(a);<br />
-</code></p>
-<p>Array<br />
-<code><br />
-var a = [];<br />
-var b = a.slice()<br />
-</code></p>
+
+Object
+
+    var a = {};
+    var b = qx.lang.Object.clone(a);
+
+Array
+
+    var a = [];
+    var b = a.slice();
+
+

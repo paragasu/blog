@@ -1,6 +1,6 @@
 ---
 layout: post
-title: qooxdoo execute callback function on this scope
+title: Qooxdoo execute callback function on this scope
 date: 2012-03-06 02:02:08.000000000 +08:00
 type: post
 published: true

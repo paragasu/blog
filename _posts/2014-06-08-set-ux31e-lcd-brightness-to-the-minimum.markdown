@@ -17,10 +17,8 @@ author:
   login: paragasu
   email: paragasu@gmail.com
   display_name: paragasu
-  first_name: ''
-  last_name: ''
 ---
-<p>add the following line to the /etc/rc.local</p>
-<p><code><br />
-echo 0 &gt; /sys/class/backlight/acpi_video0/brightness<br />
-</code></p>
+Add the following line to the _/etc/rc.local_.  
+
+    echo 0 > /sys/class/backlight/acpi_video0/brightness  
+

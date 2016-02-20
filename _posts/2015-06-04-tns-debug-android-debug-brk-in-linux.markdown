@@ -20,16 +20,16 @@ author:
   login: paragasu
   email: paragasu@gmail.com
   display_name: paragasu
-  first_name: ''
-  last_name: ''
 ---
-<p>the nativescript cli<br />
-<code><br />
-$tns debug android --debug-brk<br />
-</code></p>
-<p>The command expect your google chrome executable name is "chrome".<br />
-But in my debian jessie workstation. The executable name is "google-chrome"</p>
-<p><code><br />
-$ln -s /usr/bin/google-chrome ~/bin/chrome<br />
-</code></p>
-<p>will fix the problem.</p>
+The nativescript cli
+
+    $tns debug android --debug-brk
+
+The command expect your google chrome executable name is "chrome".  
+But in my debian jessie workstation. The executable name is "google-chrome"
+
+    $ln -s /usr/bin/google-chrome ~/bin/chrome
+
+will fix the problem.
+
+

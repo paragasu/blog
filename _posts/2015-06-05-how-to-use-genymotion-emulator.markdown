@@ -15,15 +15,13 @@ meta:
 author:
   login: paragasu
   email: paragasu@gmail.com
-  display_name: paragasu
-  first_name: ''
-  last_name: ''
 ---
-<p>Start the emulator. Then find out the genymotion assigned IP address</p>
-<p><code><br />
-$ps ax | grep geny<br />
-</code></p>
-<p>Then connect using adb<br />
-<code><br />
-$adb connect 192.168.1.3<br />
-</code></p>
+
+Start the emulator. Then find out the genymotion assigned IP address
+
+    $ps ax | grep geny
+
+Then connect using adb
+
+    $adb connect 192.168.1.3
+

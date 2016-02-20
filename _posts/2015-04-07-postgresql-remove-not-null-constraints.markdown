@@ -17,9 +17,9 @@ author:
   login: paragasu
   email: paragasu@gmail.com
   display_name: paragasu
-  first_name: ''
-  last_name: ''
 ---
-<p><code><br />
-ALTER TABLE booking ALTER nationality DROP not null;<br />
-</code></p>
+
+    ALTER TABLE booking ALTER nationality DROP not null;  
+
+
+

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: output  csv from postgresql
+title: Output  csv from postgresql
 date: 2012-03-17 03:29:57.000000000 +08:00
 type: post
 published: true
@@ -14,9 +14,6 @@ author:
   login: paragasu
   email: paragasu@gmail.com
   display_name: paragasu
-  first_name: ''
-  last_name: ''
 ---
-<p><code><br />
-psql&gt; COPY (SELECT * FROM tablename) TO '/tmp/filename.csv' WITH CSV HEADER;<br />
-</code></p>
+
+    psql> COPY (SELECT * FROM tablename) TO '/tmp/filename.csv' WITH CSV HEADER;

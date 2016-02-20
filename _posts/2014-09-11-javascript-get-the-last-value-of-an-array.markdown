@@ -1,6 +1,6 @@
 ---
 layout: post
-title: javascript get the last value of an array
+title: Javascript get the last value of an array
 date: 2014-09-11 03:19:20.000000000 +08:00
 type: post
 published: true
@@ -16,10 +16,10 @@ author:
   login: paragasu
   email: paragasu@gmail.com
   display_name: paragasu
-  first_name: ''
-  last_name: ''
 ---
-<p>the value of the last item in a javascript array</p>
-<p><code><br />
-arr.split(-1)[0]<br />
-</code></p>
+
+The value of the last item in a javascript array
+
+    arr.split(-1)[0]
+
+

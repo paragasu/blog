@@ -16,10 +16,10 @@ author:
   login: paragasu
   email: paragasu@gmail.com
   display_name: paragasu
-  first_name: ''
-  last_name: ''
 ---
-<p>Add this into ~/.bash_profile<br />
-<code><br />
-setxkbmap -option terminate:ctrl_alt_bksp<br />
-</code></p>
+
+Add this into ~/.bash_profile
+
+    setxkbmap -option terminate:ctrl_alt_bksp
+
+

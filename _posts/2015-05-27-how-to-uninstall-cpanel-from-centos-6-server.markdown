@@ -19,11 +19,13 @@ author:
   first_name: ''
   last_name: ''
 ---
-<p><code><br />
-#yum erase 'centos*'<br />
-<code></p>
-<p>make sure to edit the /etc/yum.conf to remove the packages listed in the exclude section<br />
-<code><br />
-[main]<br />
-exclude= ..<br />
-</code></code></code></p>
+    #yum erase 'centos*'
+
+
+Make sure to edit the _/etc/yum.conf_ to remove the packages listed in the exclude section
+
+    [main]
+    exclude= ..
+
+
+

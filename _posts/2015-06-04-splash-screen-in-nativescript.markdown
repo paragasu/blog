@@ -18,9 +18,10 @@ meta:
 author:
   login: paragasu
   email: paragasu@gmail.com
-  display_name: paragasu
-  first_name: ''
-  last_name: ''
 ---
-<p>More info on this post</p>
-<p><a title="https://www.nativescript.org/blog/splash-screen-for-your-android-applications" href="https://www.nativescript.org/blog/splash-screen-for-your-android-applications">https://www.nativescript.org/blog/splash-screen-for-your-android-applications</a></p>
+
+
+[Splas screen for your android applications](https://www.nativescript.org/blog/splash-screen-for-your-android-applications" href="https://www.nativescript.org/blog/splash-screen-for-your-android-applications)
+
+
+
