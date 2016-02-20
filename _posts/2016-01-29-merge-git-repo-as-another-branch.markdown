@@ -12,7 +12,6 @@ I want to have one repo called api with two branch php and nodejs.
     $git remote add nodejs ../api-nodejs
     $git remote update
     $git checkout -b nodejs
-    $git checkout nodejs
     $git rm -f *
     $git merge nodejs/master 
     $git push -f
