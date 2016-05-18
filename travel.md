@@ -20,5 +20,5 @@ So far,
 5. Indonesia *Jun 2013*
 6. Myanmar *January 2015*
 7. Taiwan *January 2016*
-
+8. Nepal & Lobuche Peak 6119m *April 2016*
 
