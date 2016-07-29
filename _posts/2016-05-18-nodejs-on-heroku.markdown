@@ -1,5 +1,5 @@
 ---
-laout: post
+layout: post
 title: Nodejs gotcha on heroku
 date: 2016-05-18 11:47:00 +08:00
 type: post
